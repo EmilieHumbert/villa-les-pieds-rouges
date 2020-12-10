@@ -1,3 +1,12 @@
+import Head from "next/head";
+
 export default function Plans() {
-  return <div>Plans</div>;
+  return (
+    <>
+      <Head>
+        <title>Plans</title>
+      </Head>
+      <div>Plans</div>
+    </>
+  );
 }

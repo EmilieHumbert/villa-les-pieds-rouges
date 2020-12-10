@@ -1,3 +1,12 @@
+import Head from "next/head";
+
 export default function Gallery() {
-  return <div>Galery</div>;
+  return(
+  <>
+  <Head>
+    <title>Gallery</title>
+  </Head>
+  <div>Gallery</div>
+  </>
+  )
 }
