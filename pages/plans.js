@@ -6,7 +6,7 @@ export default function Plans() {
       <Head>
         <title>Plans</title>
       </Head>
-      <div>Plans</div>
+      <a>Plans</a>
     </>
   );
 }

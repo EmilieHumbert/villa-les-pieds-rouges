@@ -4,11 +4,11 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Villa les pieds rouges</title>
       </Head>
-      <main className={styles.main}>
+      <main>
         <div>Villa les pieds rouges</div>
         <div>
           {" "}
@@ -28,6 +28,6 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}></footer>
-    </div>
+    </>
   );
 }

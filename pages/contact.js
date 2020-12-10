@@ -6,7 +6,7 @@ export default function Contact() {
       <Head>
         <title>Contact</title>
       </Head>
-      <div>Contact</div>
+      <a>Contact</a>
     </>
   );
 }
