@@ -25,6 +25,13 @@ export default function Home() {
             <a>Contact</a>
           </Link>
         </div>
+        <div>
+          <img
+            src="/images/beach-view.jpeg"
+            className={`${styles.mainImage}`}
+            alt="beach-hossegor"
+          />
+        </div>
       </main>
 
       <footer className={styles.footer}></footer>
