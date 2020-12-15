@@ -7,7 +7,9 @@ module.exports = {
     fontFamily: { sans: ["Montserrat", "sans-serif"] },
   },
   variants: {
-    extend: {},
+    extend: {
+      fontWeight:['hover'],
+    },
   },
   plugins: [],
 };

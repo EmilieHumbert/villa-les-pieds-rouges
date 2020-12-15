@@ -1,18 +1,12 @@
 html,
 body {
   background-color: #f3f4f6;
-  font-family: "Montserrat", "sans-serif";
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.6;
-  margin: 3rem auto 6rem;
-  max-width: 36rem;
-  padding: 0 1rem;
+  max-width: 80%;
+  padding: 3rem 0 0 3rem;
 }
 
 * {
   box-sizing: border-box;
-}
-
-Link:hover {
-  text-decoration: underline;
 }
