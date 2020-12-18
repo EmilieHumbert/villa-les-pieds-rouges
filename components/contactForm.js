@@ -1,109 +1,52 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
 import axios from "axios";
 
 export default function ContactForm() {
-  const [status, setStatus] = useState({
-    submitted: false,
-    submitting: false,
-    info: { error: false, msg: null },
+  const { handleSubmit, errors, formState, register } = useForm({
+    defaultValues: {},
   });
+  const { isSubmitSuccessful, isSubmitting } = formState;
 
-  const [inputs, setInputs] = useState({
-    fullName: "",
-    email: "",
-    message: "",
-  });
-
-  const handleServerResponse = (ok, msg) => {
-    if (ok) {
-      setStatus({
-        submitted: true,
-        submitting: false,
-        info: { error: false, msg: msg },
-      });
-      setInputs({
-        fullName: "",
-        email: "",
-        message: "",
-      });
-    } else {
-      setStatus({
-        info: { error: true, msg: msg },
-      });
-    }
-  };
-
-  const handleOnChange = (e) => {
-    e.persist();
-    setInputs((prev) => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }));
-    setStatus({
-      submitted: false,
-      submitting: false,
-      info: { error: false, msg: null },
-    });
-  };
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
-    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-    axios({
-      method: "POST",
-      url: "https://formspree.io/f/xeqprbrl",
-      data: inputs,
-    })
+  const onSubmit = async (data) => {
+    axios
+      .get("https://formspree.io/f/xeqprbrl")
       .then((response) => {
-        handleServerResponse(
-          true,
-          "Thank you,your request has been submitted."
-        );
+        console.log("Thank you,your request has been submitted.");
       })
-      .catch((error) => {
-        handleServerResponse(false, error.response.data.error);
-      });
+      .catch((error) => console.log("error"));
   };
   return (
     <main>
       <h1>Contact us</h1>
-      <form onSubmit={handleOnSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="fullName">Full Name</label>
-        <input
-          id="fullName"
-          type="text"
-          onChange={handleOnChange}
-          requiredvalue={inputs.fullName}
-        />
+        <input name="fullName" ref={register({ required: true })} type="text" />
+        {errors.fullName && <p>This is required</p>}
         <label htmlFor="email">Email</label>
         <input
-          id="email"
-          type="email"
           name="_replyto"
-          onChange={handleOnChange}
-          required
-          value={inputs.email}
+          ref={register({ required: true })}
+          type="email"
         />
+        {errors._replyto && <p>This is required</p>}
         <label htmlFor="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          onChange={handleOnChange}
-          required
-          value={inputs.message}
-        />
-        <input type="hidden" name="_subject" value="New message from villaLesPiedsRouges.fr"></input>
-        <button type="submit" disabled={status.submitting}>
-          {!status.submitting
-            ? !status.submitted
-              ? "Submit"
-              : "Submitted"
-            : "Submitting..."}
+        <textarea name="message" ref={register({ required: true })} />
+        {errors.message && <p>This is required</p>}
+        <input
+          name="_subject"
+          ref={register}
+          type="hidden"
+          value="New message from villaLesPiedsRouges.fr"
+        ></input>
+        <button type="submit" disabled={isSubmitting || isSubmitSuccessful}>
+          {isSubmitting
+            ? "Submitting..."
+            : isSubmitSuccessful
+            ? "Submitted"
+            : "Submit"}
         </button>
       </form>
-      {status.info.error && (
-        <div className="error">Error: {status.info.msg}</div>
-      )}
-      {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
     </main>
   );
 }
