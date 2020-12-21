@@ -1,7 +1,7 @@
 export default function AboutUs() {
   return (
     <>
-      <h1 className="border-b border-red-900 font-bold my-2 text-lg">About Us</h1>
+      <h1 className="font-bold my-2 text-lg">About Us</h1>
       <p className="leading-relaxed">
         Phasellus sit amet faucibus nunc, eget imperdiet justo. Donec sed
         elementum dolor. Pellentesque nec ex fermentum, dignissim sem id, tempor

@@ -1,7 +1,7 @@
 export default function AboutTheVilla() {
   return (
     <>
-      <h1 className="border-b border-red-900 font-bold my-2 text-lg">
+      <h1 className="font-bold my-2 text-lg">
         About the villa
       </h1>
       <p className="leading-relaxed">
