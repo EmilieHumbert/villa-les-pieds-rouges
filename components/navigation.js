@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <nav className="space-x-4 mb-4">
+    <nav className="space-x-4 mb-4 pl-10 pt-20 pr-10 pb-20">
       <Link href="/">
         <a className="font-medium text-3xl text-red-900 ">
           Villa les pieds rouges

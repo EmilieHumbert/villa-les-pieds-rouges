@@ -4,10 +4,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  max-width: 80%;
-  padding: 3rem;
 }
 
+body {
+  padding: 1.25rem;
+}
 * {
   box-sizing: border-box;
 }
