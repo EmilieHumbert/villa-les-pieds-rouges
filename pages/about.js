@@ -9,13 +9,13 @@ export default function About() {
       <Head>
         <title>About</title>
       </Head>
-      <div class="grid grid-cols-3 gap-12">
-        <div class="col-span-2">
+      <div className="grid grid-cols-3 gap-12">
+        <div className="col-span-2">
           <AboutTheVilla />
           <br />
           <AboutUs />
         </div>
-        <div class="col-span-1">
+        <div className="col-span-1">
           <KeyDates />
         </div>
       </div>

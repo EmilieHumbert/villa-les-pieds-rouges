@@ -1,10 +1,10 @@
 export default function AboutTheVilla() {
   return (
     <>
-      <h1 class="border-b border-red-900 font-bold my-2 text-lg">
+      <h1 className="border-b border-red-900 font-bold my-2 text-lg">
         About the villa
       </h1>
-      <p class="leading-relaxed">
+      <p className="leading-relaxed">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
         hendrerit non diam ac mollis. Aliquam porta magna vel metus ultricies
         rhoncus. Maecenas auctor imperdiet feugiat. Donec posuere, velit at
@@ -19,7 +19,7 @@ export default function AboutTheVilla() {
         dolor. Vivamus eu quam massa. In hac habitasse platea dictumst. Praesent
         purus velit, ultrices faucibus erat et, bibendum faucibus mauris.
       </p>
-      <p class="leading-relaxed">
+      <p className="leading-relaxed">
         Duis consectetur ultrices varius. Pellentesque nec varius lorem, viverra
         posuere lectus. Integer posuere neque id leo ornare, sed posuere tellus
         tempor. Etiam bibendum euismod lacus, malesuada pulvinar lectus
