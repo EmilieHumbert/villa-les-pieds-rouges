@@ -2,31 +2,25 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <nav className="space-x-4 mb-4 pl-10 pt-20 pr-10 pb-20">
+    <nav className="flex justify-center px-10 py-20 space-x-10">
       <Link href="/">
-        <a className="font-medium text-3xl text-red-900 ">
-          Villa les pieds rouges
+        <a className="font-medium text-3xl text-red-900">
+          Villa<br />
+          les<br />
+          pieds rouges
         </a>
       </Link>{" "}
       <Link href="/gallery">
-        <a className="text-lg">
-          Gallery
-        </a>
+        <a className="text-lg flex flex-wrap content-center">Gallery</a>
       </Link>{" "}
       <Link href="/plans">
-        <a className="text-lg">
-          Plans
-        </a>
+        <a className="text-lg flex flex-wrap content-center">Plans</a>
       </Link>{" "}
       <Link href="/about">
-        <a className="text-lg">
-          About
-        </a>
+        <a className="text-lg flex flex-wrap content-center">About</a>
       </Link>{" "}
       <Link href="/contact">
-        <a className="text-lg">
-          Contact
-        </a>
+        <a className="text-lg flex flex-wrap content-center">Contact</a>
       </Link>
     </nav>
   );
