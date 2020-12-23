@@ -10,9 +10,6 @@ export default function Navigation() {
           pieds rouges
         </a>
       </Link>{" "}
-      <Link href="/gallery">
-        <a className="text-lg flex flex-wrap content-center">Gallery</a>
-      </Link>{" "}
       <Link href="/plans">
         <a className="text-lg flex flex-wrap content-center">Plans</a>
       </Link>{" "}
