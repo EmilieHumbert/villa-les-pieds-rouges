@@ -1,8 +1,10 @@
+import MyCarousel from "../components/myCarousel";
+
 export default function Home() {
   return (
     <main>
       <div>
-        <img src="/images/beach-view.jpeg" alt="beach-hossegor" />
+        <MyCarousel />
       </div>
     </main>
   );
