@@ -4,74 +4,52 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function MyCarousel() {
-  var settings = {
+  const settings = {
     dots: true,
+    className: "center",
+    centerMode: true,
     infinite: true,
+    centerPadding: "100px",
     autoplay: true,
     speed: 2000,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 3,
           infinite: true,
           dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
     ],
   };
 
   return (
-    <Slider {...settings}>
-      <div>
-        <h3>
-          <img className="h-80  w-96" src="/images/bedroom.jpg" />
-        </h3>
-      </div>
-      <div>
-        <h3>
-          <img className="h-80  w-96" src="/images/beach-view.jpeg" />
-        </h3>
-      </div>
-      <div>
-        <h3>
-          <img className="h-80  w-96" src="/images/houses.jpg" />
-        </h3>
-      </div>
-      <div>
-        <h3>
-          <img className="h-80  w-96" src="/images/livingroom.jpg" />
-        </h3>
-      </div>
-      <div>
-        <h3>
-          <img className="h-80  w-96" src="/images/ocean.jpg" />
-        </h3>
-      </div>
-      <div>
-        <h3>
-          <img className="h-80  w-96" src="/images/stairs.jpg" />
-        </h3>
-      </div>
-    </Slider>
+    <div>
+      <Slider {...settings}>
+        <div className="px-2">
+          <div className="m-10 h-96 w-full bg-bedroom bg-cover bg-center"></div>
+        </div>
+        <div className="px-2">
+          <div className="m-10 h-96 w-full bg-beachView bg-cover bg-center"></div>
+        </div>
+        <div className="px-2">
+          <div className="m-10 h-96 w-full bg-houses bg-cover bg-bottom"></div>
+        </div>
+        <div className="px-2">
+          <div className="m-10 h-96 w-full bg-livingroom bg-cover bg-center"></div>
+        </div>
+        <div className="px-2">
+          <div className="m-10 h-96 w-full bg-ocean bg-cover bg-center"></div>
+        </div>
+        <div className="px-2">
+          <div className="m-10 h-96 w-full bg-stairs bg-cover bg-center"></div>
+        </div>
+      </Slider>
+    </div>
   );
 }
