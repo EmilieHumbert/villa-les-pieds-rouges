@@ -1,12 +1,11 @@
-import Head from "next/head";
+import MyCarousel from "../components/myCarousel";
 
 export default function Plans() {
   return (
-    <>
-      <Head>
-        <title>Plans</title>
-      </Head>
-      <a>Plans</a>
-    </>
+    <main>
+      <div>
+        <MyCarousel slideNames={["ground", "first", "second"]} />
+      </div>
+    </main>
   );
 }
