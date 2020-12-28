@@ -4,7 +4,16 @@ export default function Home() {
   return (
     <main>
       <div>
-        <MyCarousel />
+        <MyCarousel
+          slideNames={[
+            "bedroom",
+            "beachView",
+            "houses",
+            "livingroom",
+            "ocean",
+            "stairs",
+          ]}
+        />
       </div>
     </main>
   );

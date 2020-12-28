@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function MyCarousel() {
+export default function MyCarousel({slideNames}) {
   const settings = {
     dots: true,
     className: "center",
@@ -37,24 +37,13 @@ export default function MyCarousel() {
   return (
     <div>
       <Slider {...settings}>
-        <div className="px-2">
-          <div className="h-96 w-full bg-bedroom bg-cover bg-center"></div>
-        </div>
-        <div className="px-2">
-          <div className="h-96 w-full bg-beachView bg-cover bg-center"></div>
-        </div>
-        <div className="px-2">
-          <div className="h-96 w-full bg-houses bg-cover bg-bottom"></div>
-        </div>
-        <div className="px-2">
-          <div className="h-96 w-full bg-livingroom bg-cover bg-center"></div>
-        </div>
-        <div className="px-2">
-          <div className="h-96 w-full bg-ocean bg-cover bg-center"></div>
-        </div>
-        <div className="px-2">
-          <div className="h-96 w-full bg-stairs bg-cover bg-center"></div>
-        </div>
+        {slideNames.map((slideName) => (
+          <div className="px-2">
+            <div
+              className={`h-96 w-full bg-${slideName} bg-cover bg-bottom`}
+            ></div>
+          </div>
+        ))}
       </Slider>
     </div>
   );
