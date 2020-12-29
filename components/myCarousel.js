@@ -38,9 +38,8 @@ export default function MyCarousel({ slideNames }) {
     <div>
       <Slider {...settings}>
         {slideNames.map((slideName, index) => (
-          <div className="px-2">
+          <div key={index} className="px-2">
             <div
-              key={index}
               className={`h-96 w-full bg-${slideName} bg-cover bg-bottom`}
             ></div>
           </div>
