@@ -16,6 +16,10 @@ module.exports = {
         second: 'url("/images/second-floor.jpeg")',
         ground: 'url("/images/ground-floor.jpeg")',
       }),
+      height: {
+        md: "30rem",
+        xl: "45rem",
+      },
     },
   },
   variants: {
