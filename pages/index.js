@@ -5,6 +5,8 @@ export default function Home() {
     <main>
       <div>
         <MyCarousel
+          numberSlidesBig={3}
+          numberSlidesSmall={2}
           slideNames={[
             "bedroom",
             "beachView",
