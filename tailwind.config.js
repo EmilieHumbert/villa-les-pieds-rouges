@@ -15,9 +15,11 @@ module.exports = {
         first: 'url("/images/first-floor.jpeg")',
         second: 'url("/images/second-floor.jpeg")',
         ground: 'url("/images/ground-floor.jpeg")',
+        fullHouse: 'url("/images/les-pieds-rouges.jpeg")',
       }),
       height: {
         md: "30rem",
+        lg: "35rem",
         xl: "45rem",
       },
     },
