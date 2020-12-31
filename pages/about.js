@@ -9,8 +9,8 @@ export default function About() {
       <Head>
         <title>About</title>
       </Head>
-      <div className="grid grid-cols-3 gap-12 px-9">
-        <div className="col-span-2">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-12 px-2">
+        <div className="md:col-span-2 col-span-1">
           <AboutTheVilla />
           <br />
           <AboutUs />
