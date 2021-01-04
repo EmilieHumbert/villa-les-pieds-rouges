@@ -2,22 +2,21 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <nav className="flex justify-center px-10 py-20 space-x-10">
+    <nav className="flex h-16 items-center pt-20 pb-32 px-10  space-x-24">
       <Link href="/">
-        <a className="font-medium text-3xl text-red-900">
-          Villa<br />
-          les<br />
-          pieds rouges
+        <a className="font-black grid grid-rows-2 h-16 hover:text-red-800 text-3xl text-red-900 w-auto">
+          <div>Villa </div>
+          <div>les pieds rouges</div>
         </a>
       </Link>{" "}
       <Link href="/plans">
-        <a className="text-lg flex flex-wrap content-center">Plans</a>
+        <a className="hover:text-gray-500 text-lg">Plans</a>
       </Link>{" "}
       <Link href="/about">
-        <a className="text-lg flex flex-wrap content-center">About</a>
+        <a className="hover:text-gray-500 text-lg">About</a>
       </Link>{" "}
       <Link href="/contact">
-        <a className="text-lg flex flex-wrap content-center">Contact</a>
+        <a className="hover:text-gray-500 text-lg">Contact</a>
       </Link>
     </nav>
   );
