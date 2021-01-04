@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <nav className="flex h-16 items-center pt-20 pb-32 px-10  space-x-24">
+    <nav className="flex h-16 items-end mt-20 pt-10 pb-32 px-10 space-x-24">
       <Link href="/">
         <a className="font-black grid grid-rows-2 h-16 hover:text-red-800 text-3xl text-red-900 w-auto">
           <div>Villa </div>
