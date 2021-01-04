@@ -5,7 +5,7 @@ export default function Navigation() {
     <nav className="flex h-16 items-end mt-20 pt-10 pb-32 px-10 space-x-24">
       <Link href="/">
         <a className="font-black grid grid-rows-2 h-16 hover:text-red-800 text-3xl text-red-900 w-auto">
-          <div>Villa </div>
+          <div>Villa</div>
           <div>les pieds rouges</div>
         </a>
       </Link>{" "}
