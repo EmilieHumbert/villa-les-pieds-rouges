@@ -1,7 +1,7 @@
 export default function KeyDates() {
   return (
     <>
-      <h1 className="font-bold my-2 text-2xl">Key dates</h1>
+      <h1 className="border-b-2 border-red-900 font-bold my-2 text-2xl">Key dates</h1>
       <ul>
         <li className="leading-normal text-lg tracking-wide pb-8">
           <b>December 1814:</b> Lorem ipsum dolor sit amet, consectetur
