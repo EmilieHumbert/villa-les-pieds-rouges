@@ -7,6 +7,7 @@ export default function MyCarousel({
   slideNames,
 }) {
   const settings = {
+    arrows:false,
     dots: true,
     className: "center",
     infinite: true,
