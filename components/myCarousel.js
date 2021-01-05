@@ -3,11 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function MyCarousel({
-  slideNames,
-}) {
+export default function MyCarousel({ slideNames }) {
   const settings = {
-    arrows:false,
+    arrows: false,
     dots: true,
     className: "center",
     infinite: true,
@@ -43,7 +41,9 @@ export default function MyCarousel({
         {slideNames.map((slideName, index) => (
           <div key={index} className="px-2">
             <div
-              className={`h-md md:h-xl w-full bg-${slideName} bg-cover bg-center`}
+              className={`h-md md:h-xl w-full bg-${slideName} bg-cover bg-${
+                slideName == "houses" ? "bottom" : "center"
+              }`}
             ></div>
           </div>
         ))}
