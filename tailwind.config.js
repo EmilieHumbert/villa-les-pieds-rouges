@@ -22,6 +22,10 @@ module.exports = {
         lg: "35rem",
         xl: "40rem",
       },
+      width: {
+        sm: "186.66px",
+        md: "504px",
+      },
     },
   },
   variants: {
