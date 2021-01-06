@@ -19,7 +19,7 @@ export default function ContactForm() {
   return (
     <main>
       <div className="container grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto gap-x-32">
-        <h1 className="border-b-2 border-red-900 col-span-2 font-bold mb-8 my-2 text-2xl">
+        <h1 className="border-b-2 border-red-900 col-span-2 font-bold mb-8 text-2xl">
           Contact us
         </h1>
         {complete ? (
@@ -27,6 +27,10 @@ export default function ContactForm() {
         ) : (
           <>
             <div className="col-span-2">
+              <p className="leading-normal mb-8 text-xl tracking-wide">
+                Please send us a message if you have any questions. We will be
+                happy to get back to you as soon as possible.
+              </p>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-4">
                   <label className="block font-bold mb-2 tracking-wide text-sm uppercase">
@@ -86,14 +90,22 @@ export default function ContactForm() {
                   </button>
                 </div>
               </form>
-            </div>{" "}
-            <div className="border-b-2 border-red-900 col-span-1 lg:row-start-1 lg:col-start-3 font-bold mb-8 my-2 text-2xl w-md lg:w-sm">
-              <h1>Details</h1>
             </div>
-            <p className="leading-normal mb-8 text-xl tracking-wide">
-              Please send us a message if you have any questions. Mathieu
-              Pfiffer will be happy to get back to you as soon as possible.
-            </p>
+            <div className="col-span-1 lg:row-start-1 lg:row-span-3 lg:col-start-3 w-md lg:w-sm">
+              <h1 className="border-b-2 border-red-900 font-bold mb-8 text-2xl">
+                Details
+              </h1>
+              <div className="leading-normal mb-8 text-xl tracking-wide">
+                les pieds rouge, Hossegor, France (
+                <a
+                  href="https://www.google.com/maps/@43.6639574,-1.4436666,646m/data=!3m1!1e3?hl=en"
+                  target="_blank"
+                >
+                  Google Map
+                </a>
+                )
+              </div>
+            </div>
           </>
         )}
       </div>
