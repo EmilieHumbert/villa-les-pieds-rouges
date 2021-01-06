@@ -25,6 +25,24 @@ export default function Plans() {
             onClick={() => setActive(0)}
             className="absolute bottom-32 bg-opacity-25 bg-white border-4 border-double border-opacity-50 border-red-900 h-28 left-14 rounded-lg w-4/5"
           ></button>
+          {active === 2 && (
+            <button
+              onClick={() => setActive(2)}
+              className="absolute bg-opacity-50 bg-white border-47 border-red-900 h-28 left-14 top-28 rounded-lg w-4/5"
+            ></button>
+          )}
+          {active === 1 && (
+            <button
+              onClick={() => setActive(1)}
+              className="absolute bg-opacity-50 bg-white border-47 border-red-900 h-28 left-14 top-64 rounded-lg w-4/5"
+            ></button>
+          )}
+          {active === 0 && (
+            <button
+              onClick={() => setActive(0)}
+              className="absolute bg-opacity-50 bg-white border-47 border-red-900 bottom-32 h-28 left-14 rounded-lg w-4/5"
+            ></button>
+          )}
         </div>
         <div className="col-span-1 lg:row-start-1 lg:row-span-3 lg:col-start-3 w-md lg:w-sm">
           <h1 className="border-b-2 border-red-900 col-span-1 font-bold mb-8 text-2xl">
