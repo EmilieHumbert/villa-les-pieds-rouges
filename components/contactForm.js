@@ -67,6 +67,7 @@ export default function ContactForm() {
                     name="message"
                     placeholder="Message"
                     ref={register({ required: true })}
+                    rows="6"
                   />
                   {errors.message && <p>This is required</p>}
                 </div>
