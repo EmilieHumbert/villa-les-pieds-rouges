@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Villa les pieds rouges</title>
       </Head>
-      <Navigation />
+      <Navigation pages={["gallery", "plans", "about", "contact"]} />
       <Component {...pageProps} />
     </>
   );
