@@ -1,19 +1,34 @@
-import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import classNames from "classnames";
+
+const getHref = (page) => (page === "gallery" ? "/" : `/${page}`);
 
 export default function Navigation({ pages }) {
+  const router = useRouter();
+
   return (
     <nav className="flex items-end justify-start mx-auto max-w-xl lg:max-w-4xl mt-20 mb-32 space-x-10 sm:space-x-18 lg:space-x-30">
       <Link href="/">
         <a className="font-black grid grid-rows-2 h-16 hover:text-red-800 text-3xl text-red-900 w-50">
-          <div>Villa</div>
-          <div>les pieds rouges</div>
+          <div>
+            Villa
+            <br />
+            les pieds rouges
+          </div>
         </a>
-      </Link>{" "}
+      </Link>
       {pages.map((page) => {
+        const isActivePage = router.pathname === getHref(page);
         return (
-          <Link key={page} href={page === "gallery" ? "/" : `/${page}`}>
-            <a className="capitalize hover:text-gray-500 text-lg">{page}</a>
+          <Link key={page} href={getHref(page)}>
+            <a
+              className={classNames("capitalize hover:text-gray-500 text-lg", {
+                "border-b-2 border-red-900": isActivePage,
+              })}
+            >
+              {page}
+            </a>
           </Link>
         );
       })}
