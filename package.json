@@ -8,9 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "next": "10.0.3",
+    "next-i18next": "^7.0.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
     "primeicons": "^4.1.0",
