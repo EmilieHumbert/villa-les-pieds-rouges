@@ -1,14 +1,23 @@
 import Head from "next/head";
+import PropTypes from "prop-types";
 
+import { withTranslation } from "../i18n";
 import ContactForm from "../components/contactForm";
 
-export default function Contact() {
+function Contact({ t }) {
   return (
     <>
-      <Head>
-        <title>Contact</title>
-      </Head>
+      <Head title={t("title")} />
       <ContactForm />
     </>
   );
 }
+
+Contact.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+Contact.getInitialProps = async () => ({
+  namespacesRequired: ["contact"],
+});
+
+export default withTranslation("contact")(Contact);

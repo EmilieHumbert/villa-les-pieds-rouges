@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import PropTypes from "prop-types";
 
-export default function ContactForm() {
+import { withTranslation } from "../i18n";
+
+function ContactForm({ t }) {
   const { handleSubmit, errors, formState, register } = useForm({
     defaultValues: {},
   });
@@ -20,21 +23,20 @@ export default function ContactForm() {
     <main>
       <div className="container grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto gap-x-32">
         <h1 className="border-b-2 border-red-900 col-span-2 font-bold mb-8 text-2xl">
-          Contact us
+          {t("title")}
         </h1>
         {complete ? (
-          <div>Done!</div>
+          <div>{t("submit")}</div>
         ) : (
           <>
             <div className="col-span-2">
               <p className="leading-normal mb-8 text-xl tracking-wide">
-                Please send us a message if you have any questions. We will be
-                happy to get back to you as soon as possible.
+                {t("text")}
               </p>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-4">
                   <label className="block font-bold mb-2 tracking-wide text-sm uppercase">
-                    Full Name
+                    {t("full-name")}
                   </label>
                   <input
                     className="appearance-none focus:outline-none focus:shadow-outline border border-gray-300 leading-tight px-3 py-2 rounded text-gray-700 w-full"
@@ -43,11 +45,11 @@ export default function ContactForm() {
                     ref={register({ required: true })}
                     type="text"
                   />
-                  {errors.fullName && <p>This is required</p>}
+                  {errors.fullName && <p>{t("required")}</p>}
                 </div>
                 <div className="mb-6">
                   <label className="block uppercase tracking-wide text-sm font-bold mb-2">
-                    Email
+                    {t("email")}
                   </label>
                   <input
                     className="appearance-none focus:outline-none focus:shadow-outline border border-gray-300 leading-tight px-3 py-2 rounded text-gray-700 w-full"
@@ -56,11 +58,11 @@ export default function ContactForm() {
                     ref={register({ required: true })}
                     type="email"
                   />
-                  {errors._replyto && <p>This is required</p>}
+                  {errors._replyto && <p>{t("required")}</p>}
                 </div>
                 <div className="mb-6">
                   <label className="block uppercase tracking-wide text-sm font-bold mb-2">
-                    Message
+                    {t("message")}
                   </label>
                   <textarea
                     className="appearance-none focus:outline-none focus:shadow-outline border border-gray-300 leading-tight px-3 py-2 rounded text-gray-700 w-full"
@@ -69,7 +71,7 @@ export default function ContactForm() {
                     ref={register({ required: true })}
                     rows="6"
                   />
-                  {errors.message && <p>This is required</p>}
+                  {errors.message && <p>{t("required")}</p>}
                 </div>
                 <input
                   name="_subject"
@@ -84,25 +86,25 @@ export default function ContactForm() {
                     disabled={isSubmitting || isSubmitSuccessful}
                   >
                     {isSubmitting
-                      ? "Submitting..."
+                      ? t("submitting")
                       : isSubmitSuccessful
-                      ? "Submitted"
-                      : "Submit"}
+                      ? t("submitted")
+                      : t("submit")}
                   </button>
                 </div>
               </form>
             </div>
             <div className="col-span-1 lg:row-start-1 lg:row-span-3 lg:col-start-3 w-md lg:w-sm">
               <h1 className="border-b-2 border-red-900 font-bold mb-8 text-2xl">
-                Details
+                {t("details-title")}
               </h1>
               <div className="leading-normal mb-8 text-xl tracking-wide">
-                les pieds rouge, Hossegor, France (
+                {t("details-text")}
                 <a
                   href="https://www.google.com/maps/@43.6639574,-1.4436666,646m/data=!3m1!1e3?hl=en"
                   target="_blank"
                 >
-                  Google Map
+                  {t("details-google-map-link")}
                 </a>
                 )
               </div>
@@ -113,3 +115,9 @@ export default function ContactForm() {
     </main>
   );
 }
+
+ContactForm.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
+export default withTranslation("contact")(ContactForm);

@@ -1,0 +1,15 @@
+{ 
+  "title": "Contactez-nous",
+  "submitting": "En cours d'envoi",
+  "submitted": "Envoyé!",
+  "submit": "Envoyez!",
+  "text": "N'hésitez nous envoyer un message si vous avez des questions. Nous nous ferons un plaisir de vous répondre dans les plus brefs délais.",
+  "full-name": "Nom et prénom",
+  "required": "Merci de remplir ce champ",
+  "email": "Email",
+  "message": "Message",
+  "submit-button": "Envoyez",
+  "details-title": "Détails",
+  "details-text": "Les Pieds Rouges, Hossegor, France",
+  "details-google-map-link": "(Google Map)"
+}
