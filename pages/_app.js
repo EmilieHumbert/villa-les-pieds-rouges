@@ -1,10 +1,14 @@
+import React from "react";
 import Head from "next/head";
 import Navigation from "../components/navigation";
+
+import App from 'next/app'
+import { appWithTranslation } from "../i18n";
 
 import "tailwindcss/tailwind.css";
 import "../styles/globals.css";
 
-export default function App({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -15,3 +19,10 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+MyApp.getInitialProps = async (appContext) => {
+  const appProps = await App.getInitialProps(appContext);
+  return { ...appProps };
+};
+
+export default appWithTranslation(MyApp);
