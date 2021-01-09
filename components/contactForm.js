@@ -41,7 +41,7 @@ function ContactForm({ t }) {
                   <input
                     className="appearance-none focus:outline-none focus:shadow-outline border border-gray-300 leading-tight px-3 py-2 rounded text-gray-700 w-full"
                     name="fullName"
-                    placeholder="John Smith"
+                    placeholder={t("full-name-example")}
                     ref={register({ required: true })}
                     type="text"
                   />
@@ -54,7 +54,7 @@ function ContactForm({ t }) {
                   <input
                     className="appearance-none focus:outline-none focus:shadow-outline border border-gray-300 leading-tight px-3 py-2 rounded text-gray-700 w-full"
                     name="_replyto"
-                    placeholder="johnSmith@awesome.com"
+                    placeholder={t("email-example")}
                     ref={register({ required: true })}
                     type="email"
                   />
@@ -89,7 +89,7 @@ function ContactForm({ t }) {
                       ? t("submitting")
                       : isSubmitSuccessful
                       ? t("submitted")
-                      : t("submit")}
+                      : t("submit-button")}
                   </button>
                 </div>
               </form>
