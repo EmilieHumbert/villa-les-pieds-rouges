@@ -1,28 +1,36 @@
-export default function KeyDates() {
+import PropTypes from "prop-types";
+
+import { withTranslation } from "../i18n";
+
+function KeyDates({ t }) {
   return (
     <>
-      <h1 className="border-b-2 border-red-900 font-bold mb-8 my-2 text-2xl">Key dates</h1>
+      <h1 className="border-b-2 border-red-900 font-bold mb-8 my-2 text-2xl">
+        {t("title-dates")}
+      </h1>
       <ul>
         <li className="leading-normal mb-8 text-lg tracking-wide">
-          <b>December 1814:</b> Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit.
+          <b>{t("date-one")}</b> {t("date-one-text")}
         </li>
         <li className="leading-normal mb-8 text-lg tracking-wide">
-          <b>December 1858:</b> Vestibulum placerat tellus sit amet elit
-          molestie, quis vehicula quam convallis.
+          <b>{t("date-two")}</b> {t("date-two-text")}
         </li>
         <li className="leading-normal mb-8 text-lg tracking-wide">
-          <b>December 1925:</b> Suspendisse condimentum ex a nisl dignissim
-          mollis.
+          <b>{t("date-three")}</b> {t("date-three-text")}
         </li>
         <li className="leading-normal mb-8 text-lg tracking-wide">
-          <b>December 1968:</b> Cras sit amet mi eget est tincidunt luctus.
+          <b>{t("date-four")}</b> {t("date-four-text")}
         </li>
         <li className="leading-normal mb-8 text-lg tracking-wide">
-          <b>December 2020:</b> In at urna rutrum, convallis turpis eu, semper
-          tortor.
+          <b>{t("date-five")}</b> {t("date-five-text")}
         </li>
       </ul>
     </>
   );
 }
+
+KeyDates.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
+export default withTranslation("about")(KeyDates);

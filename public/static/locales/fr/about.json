@@ -1,0 +1,20 @@
+{
+  "title": "À propos",
+  "title-villa": "À propos de la villa",
+  "title-us": "À propos de nous",
+  "title-dates": "Dates clés",
+  "text-villa-paragraph-one": "Lorem ipsum French dolor sit amet, consectetur adipiscing elit. Phasellus ut euismod tellus. Quisque euismod dui urna, in laoreet nibh rhoncus non. Vivamus ligula eros, tincidunt ut nisl ut, vehicula tristique quam. Mauris volutpat sagittis vehicula. Curabitur sit amet nunc et tortor elementum commodo elementum et ligula. Phasellus pharetra vulputate pellentesque. Ut laoreet tempor ex. Nunc eleifend, libero nec consequat egestas, lorem justo aliquam justo, ut finibus nisi dolor sit amet ipsum.",
+  "text-villa-paragraph-two": "Fusce luctus French id purus eget aliquam. In non nunc non nisi porttitor aliquet et id est. Sed tellus tellus, pellentesque a condimentum et, tincidunt ac nulla. Nunc id felis arcu. Morbi purus enim, rhoncus sit amet felis nec, pellentesque blandit erat. Donec sed tristique ligula, vitae cursus turpis. In condimentum ullamcorper purus, ut ultrices enim. In sed bibendum felis. Aenean vitae metus ultrices, cursus tellus et, faucibus nisl. Praesent molestie dictum cursus. In vitae aliquet nibh, blandit dignissim felis. Morbi ac neque mattis, euismod nisi sed, scelerisque justo.", 
+  "text-us-paragraph-one": "Sed vel French justo laoreet, eleifend lacus in, faucibus metus. Donec turpis nibh, fringilla id erat et, imperdiet lobortis ligula. Nunc malesuada feugiat odio a dictum. Donec eget consequat tellus. Nunc feugiat tincidunt eros, sed molestie metus lobortis nec. Proin eleifend dui varius sapien ultricies, et condimentum eros vulputate. Maecenas at tempor elit. Nam id dictum est. Etiam in ex a arcu faucibus facilisis. Suspendisse placerat imperdiet enim, non scelerisque tortor dictum vitae. Pellentesque semper, enim sed vulputate iaculis, erat arcu iaculis diam, in mattis ante urna quis ipsum. Vestibulum egestas sollicitudin dolor ac porta. Fusce velit mauris, egestas vitae dictum eu, fermentum a odio. Donec at orci eu tellus mollis imperdiet.",
+  "text-us-paragraph-two": "Mauris consectetur French augue sed ante imperdiet tempus. Aliquam lacinia ipsum eget eros semper, cursus scelerisque sapien fermentum. Pellentesque efficitur elementum justo, id faucibus lacus ornare at. Nam vitae tempus elit, nec ultricies magna. Aliquam sagittis nulla diam. Vestibulum viverra ac lacus sed maximus. Sed condimentum nunc ante, vel dapibus ipsum sodales in. Sed porta nibh luctus, semper turpis quis, placerat dolor. Phasellus in vestibulum est, id varius diam.",
+  "date-one": "Décembre 1814:",
+  "date-one-text": "Lorem ipsum French dolor sit amet, consectetur adipiscing elit.",
+  "date-two": "Juin 1858:",
+  "date-two-text": "Vestibulum French placerat tellus sit amet elit molestie, quis vehicula quam convallis.",
+  "date-three": "Septembre 1925:",
+  "date-three-text": "Suspendisse French condimentum ex a nisl dignissim mollis.",
+  "date-four": "Janvier 1968:",
+  "date-four-text": "Cras sit French amet mi eget est tincidunt luctus.",
+  "date-five": "Mai 2020:",
+  "date-five-text": "In at French urna rutrum, convallis turpis eu, semper tortor."
+}

@@ -1,14 +1,15 @@
 import Head from "next/head";
+import PropTypes from "prop-types";
+
+import { withTranslation } from "../i18n";
 import KeyDates from "../components/aboutKeyDates";
 import AboutTheVilla from "../components/aboutTheVilla";
 import AboutUs from "../components/aboutUs";
 
-export default function About() {
+function About({ t }) {
   return (
     <>
-      <Head>
-        <title>About</title>
-      </Head>
+      <Head title={t("title")} />
       <div className="container grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto gap-32">
         <div className="col-span-2">
           <AboutTheVilla />
@@ -22,3 +23,12 @@ export default function About() {
     </>
   );
 }
+
+About.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+About.getInitialProps = async () => ({
+  namespacesRequired: ["about"],
+});
+
+export default withTranslation("about")(About);
