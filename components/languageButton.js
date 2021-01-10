@@ -12,9 +12,10 @@ function LanguageButton({ i18n }) {
         return [
           <button
             onClick={() => i18n.changeLanguage(language)}
+            key={language}
             type="button"
             className={classNames(
-              "capitalize hover:text-gray-500 text-lg border-b-2 border-white",
+              "capitalize focus:outline-none hover:text-gray-500 text-lg border-b-2 border-white",
               {
                 "border-red-900 font-bold": i18n.language === language,
               }
