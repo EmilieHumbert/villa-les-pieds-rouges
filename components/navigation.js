@@ -27,7 +27,7 @@ function Navigation({ t }) {
         return (
           <Link key={page} href={getHref(page)}>
             <a
-              className={classNames("capitalize hover:text-gray-500 text-lg", {
+              className={classNames("capitalize hover:text-gray-500 text-lg border-b-2 border-white", {
                 "border-b-2 border-red-900": isActivePage,
               })}
             >
