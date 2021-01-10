@@ -103,7 +103,7 @@ Plans.propTypes = {
   t: PropTypes.func.isRequired,
 };
 Plans.getInitialProps = async () => ({
-  namespacesRequired: ["plans"],
+  namespacesRequired: ["navigation", "plans"],
 });
 
 export default withTranslation("plans")(Plans);

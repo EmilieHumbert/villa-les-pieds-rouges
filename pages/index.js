@@ -1,6 +1,6 @@
 import MyCarousel from "../components/myCarousel";
 
-export default function Home() {
+function Home() {
   return (
     <main>
       <div>
@@ -18,3 +18,9 @@ export default function Home() {
     </main>
   );
 }
+
+Home.getInitialProps = async () => ({
+  namespacesRequired: ["navigation"],
+});
+
+export default Home;

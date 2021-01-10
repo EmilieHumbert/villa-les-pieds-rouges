@@ -28,7 +28,7 @@ About.propTypes = {
   t: PropTypes.func.isRequired,
 };
 About.getInitialProps = async () => ({
-  namespacesRequired: ["about"],
+  namespacesRequired: ["about", "navigation"],
 });
 
 export default withTranslation("about")(About);

@@ -17,7 +17,7 @@ Contact.propTypes = {
   t: PropTypes.func.isRequired,
 };
 Contact.getInitialProps = async () => ({
-  namespacesRequired: ["contact"],
+  namespacesRequired: ["contact", "navigation"],
 });
 
 export default withTranslation("contact")(Contact);
