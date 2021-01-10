@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import classNames from "classnames";
+import PropTypes from "prop-types";
+
+import { i18n, withTranslation } from "../i18n";
 
 const getHref = (page) => (page === "gallery" ? "/" : `/${page}`);
 
-export default function Navigation({ pages }) {
+function Navigation({ t }) {
   const router = useRouter();
+  const pages = [t("gallery"), t("plans"), t("about"), t("contact")];
 
   return (
     <nav className="flex items-end justify-start mx-auto max-w-xl lg:max-w-4xl mt-20 mb-32 space-x-10 sm:space-x-18 lg:space-x-30">
@@ -32,6 +36,20 @@ export default function Navigation({ pages }) {
           </Link>
         );
       })}
+      <button
+        type="button"
+        onClick={() =>
+          i18n.changeLanguage(i18n.language === "en" ? "fr" : "en")
+        }
+      >
+        {t("change-locale")}
+      </button>
     </nav>
   );
 }
+
+Navigation.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
+export default withTranslation("navigation")(Navigation);

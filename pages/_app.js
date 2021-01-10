@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Villa les pieds rouges</title>
       </Head>
-      <Navigation pages={["gallery", "plans", "about", "contact"]} />
+      <Navigation />
       <Component {...pageProps} />
     </>
   );
