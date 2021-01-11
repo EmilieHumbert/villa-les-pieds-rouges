@@ -11,13 +11,11 @@ function Navigation({ t, i18n }) {
   const pages = ["gallery", "plans", "about", "contact"];
 
   return (
-    <nav className="flex items-end justify-start mx-auto max-w-xl lg:max-w-4xl mt-20 mb-32 space-x-10 sm:space-x-18 lg:space-x-30">
+    <nav className="flex items-end justify-between mx-auto max-w-xl lg:max-w-4xl mt-20 mb-32 space-x-10 sm:space-x-18 lg:space-x-30">
       <Link href="/">
-        <a className="font-black grid grid-rows-2 h-16 hover:text-red-800 text-3xl text-red-900 w-50">
+        <a className="font-black h-16 hover:text-red-800 text-3xl text-red-900">
           <div>
-            Villa
-            <br />
-            les pieds rouges
+            Villa les pieds rouges
           </div>
         </a>
       </Link>
