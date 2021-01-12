@@ -21,32 +21,32 @@ function Plans({ t }) {
           <div className="bg-contain bg-fullHouse bg-no-repeat bg-top col-span-2 h-xl mb-8 relative w-xl">
             <button
               onClick={() => setActive(2)}
-              className="absolute bg-opacity-25 bg-white border-4 border-double border-opacity-50 border-red-900 h-28 left-14 top-28 rounded-lg w-4/5"
+              className="absolute bg-opacity-25 bg-white border-4 border-double border-opacity-50 border-red-900 focus:outline-none h-1/6 left-1/6 top-1/6 rounded-lg w-8/12"
             ></button>
             <button
               onClick={() => setActive(1)}
-              className="absolute bg-opacity-25 bg-white border-4 border-double border-opacity-50 border-red-900 h-28 left-14 top-64 rounded-lg w-4/5"
+              className="absolute bg-opacity-25 bg-white border-4 border-double border-opacity-50 border-red-900 focus:outline-none h-1/6 left-1/6 top-42 rounded-lg w-8/12"
             ></button>
             <button
               onClick={() => setActive(0)}
-              className="absolute bottom-32 bg-opacity-25 bg-white border-4 border-double border-opacity-50 border-red-900 h-28 left-14 rounded-lg w-4/5"
+              className="absolute bg-opacity-25 bg-white border-4 border-double border-opacity-50 border-red-900 bottom-1/6 focus:outline-none h-1/6 left-1/6 rounded-lg w-8/12"
             ></button>
             {active === 2 && (
               <button
                 onClick={() => setActive(2)}
-                className="absolute bg-opacity-50 bg-white border-47 border-red-900 h-28 left-14 top-28 rounded-lg w-4/5"
+                className="absolute bg-opacity-50 bg-white border-47 border-red-900 focus:outline-none h-1/6 left-1/6 top-1/6 rounded-lg w-8/12"
               ></button>
             )}
             {active === 1 && (
               <button
                 onClick={() => setActive(1)}
-                className="absolute bg-opacity-50 bg-white border-47 border-red-900 h-28 left-14 top-64 rounded-lg w-4/5"
+                className="absolute bg-opacity-50 bg-white border-47 border-red-900 focus:outline-none h-1/6 left-1/6 top-42 rounded-lg w-8/12"
               ></button>
             )}
             {active === 0 && (
               <button
                 onClick={() => setActive(0)}
-                className="absolute bg-opacity-50 bg-white border-47 border-red-900 bottom-32 h-28 left-14 rounded-lg w-4/5"
+                className="absolute bg-opacity-50 bg-white border-47 border-red-900 bottom-1/6 focus:outline-none h-1/6 left-1/6 rounded-lg w-8/12"
               ></button>
             )}
           </div>

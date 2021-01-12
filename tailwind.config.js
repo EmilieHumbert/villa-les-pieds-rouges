@@ -27,6 +27,10 @@ module.exports = {
         lg: "35rem",
         xl: "40rem",
       },
+      inset:{
+        '1/6': '16%',
+        '42': '42%'
+      },
       width: {
         sm: "186.66px",
         md: "504px",
