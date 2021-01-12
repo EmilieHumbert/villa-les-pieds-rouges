@@ -94,7 +94,7 @@ function ContactForm({ t }) {
                 </div>
               </form>
             </div>
-            <div className="col-span-1 lg:row-start-1 lg:row-span-3 lg:col-start-3 w-md lg:w-sm">
+            <div className="col-span-2 lg:col-span-1 lg:row-start-1 lg:row-span-3 lg:col-start-3 lg:w-sm">
               <h1 className="border-b-2 border-red-900 font-bold mb-8 text-2xl">
                 {t("details-title")}
               </h1>
