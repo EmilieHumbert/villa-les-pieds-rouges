@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Navigation from "../components/navigation";
+import Footer from "../components/footer";
 
 import App from "next/app";
 import { appWithTranslation } from "../i18n";
@@ -15,9 +16,14 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Villa les pieds rouges</title>
       </Head>
-      <LanguageButton />
+      <div className={"hidden sm:block"}>
+        <LanguageButton />
+      </div>
       <Navigation />
       <Component {...pageProps} />
+      <div className={"sm:hidden"}>
+        <Footer />
+      </div>
     </>
   );
 }
