@@ -13,9 +13,9 @@ function Navigation({ t, i18n }) {
   return (
     <nav className="flex items-end justify-between mx-auto max-w-xl lg:max-w-4xl mt-20 mb-32 space-x-10 sm:space-x-18 lg:space-x-30">
       <Link href="/">
-        <a className="font-black h-16 hover:text-red-800 text-3xl text-red-900">
+        <a className="bg-red-900 hover:bg-red-800 font-sans h-24 sm:h-36 p-2 text-md sm:text-3xl text-white w-24 min-w-6rem sm:w-36 ">
           <div>
-            Villa les pieds rouges
+            Villa les Pieds Rouges
           </div>
         </a>
       </Link>

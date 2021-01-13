@@ -32,6 +32,9 @@ module.exports = {
         42: "42%",
         35: "35%",
       },
+      minWidth: {
+        "6rem": "6rem",
+      },
       width: {
         sm: "186.66px",
         md: "504px",
