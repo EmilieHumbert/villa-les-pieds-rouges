@@ -11,31 +11,40 @@ function Navigation({ t, i18n }) {
   const pages = ["gallery", "plans", "about", "contact"];
 
   return (
-    <nav className="flex items-end justify-between mx-auto max-w-xl lg:max-w-4xl mt-20 mb-32 space-x-10 sm:space-x-18 lg:space-x-30">
-      <Link href="/">
-        <a className="bg-red-900 hover:bg-red-800 font-sans h-24 sm:h-36 p-2 text-md sm:text-3xl text-white w-24 min-w-6rem sm:w-36 ">
-          <div>
-            Villa les Pieds Rouges
+    <nav>
+      <div className="flex items-end justify-between mx-auto max-w-xl lg:max-w-4xl mt-m sm:mt-20 mb-8 sm:mb-32 space-x-10 sm:space-x-18 lg:space-x-30">
+        <Link href="/">
+          <a className="bg-red-900 hover:bg-red-800 font-sans h-24 sm:h-36 p-2 text-md sm:text-3xl text-white w-24 min-w-6rem sm:w-36 ">
+            <div>Villa les Pieds Rouges</div>
+          </a>
+        </Link>
+        {pages.map((page) => {
+          const isActivePage = router.pathname === getHref(page);
+          return (
+            <Link key={page} href={getHref(page)}>
+              <a
+                className={classNames(
+                  "hidden sm:block capitalize hover:text-gray-500 text-lg border-b-2 border-white",
+                  {
+                    "border-red-900": isActivePage,
+                  }
+                )}
+              >
+                {t(page)}
+              </a>
+            </Link>
+          );
+        })}
+        <div>
+          <div className="relative flex items-center h-16">
+            <div className="inset-y-0 left-0 flex sm:hidden">
+              <button className="border-2 border-red-900 text-red-900 font-bold hover:border-red-800 hover:text-red-800 px-4 py-2 rounded text-white uppercase">
+                Menu
+              </button>
+            </div>
           </div>
-        </a>
-      </Link>
-      {pages.map((page) => {
-        const isActivePage = router.pathname === getHref(page);
-        return (
-          <Link key={page} href={getHref(page)}>
-            <a
-              className={classNames(
-                "capitalize hover:text-gray-500 text-lg border-b-2 border-white",
-                {
-                  "border-red-900": isActivePage,
-                }
-              )}
-            >
-              {t(page)}
-            </a>
-          </Link>
-        );
-      })}
+        </div>
+      </div>
     </nav>
   );
 }
