@@ -47,7 +47,7 @@ function Navigation({ t, i18n }) {
             >
               Menu
             </button>
-            <div className={"absolute flex flex-col w-menu"}>
+            <div className={"absolute bg-white flex flex-col space-y-4 w-menu"}>
               {active &&
                 pages.map((page) => {
                   const isActivePage = router.pathname === getHref(page);
@@ -55,7 +55,7 @@ function Navigation({ t, i18n }) {
                     <Link key={page} href={getHref(page)}>
                       <a
                         className={classNames(
-                          "bg-white border-b-2 border-transparent bottom-0 capitalize focus:outline-none pl-2 hover:text-gray-500 text-md z-50",
+                          "bg-white border-b-2 border-transparent bottom-0 capitalize focus:outline-none mt-4 pl-2 hover:text-gray-500 text-xl z-50",
                           {
                             "bg-gray-300": isActivePage,
                           }
