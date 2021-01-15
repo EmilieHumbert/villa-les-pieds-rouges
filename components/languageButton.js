@@ -7,7 +7,7 @@ function LanguageButton({ i18n }) {
   const languages = ["en", "fr"];
 
   return (
-    <div className="container flex items-start justify-end mx-auto lg:max-w-4xl">
+    <div className="content-start text-right lg:max-w-4xl">
       {languages.flatMap((language, index) => {
         return [
           <button
@@ -15,7 +15,7 @@ function LanguageButton({ i18n }) {
             key={language}
             type="button"
             className={classNames(
-              "capitalize focus:outline-none hover:text-gray-500 text-sm border-b-2 border-white",
+              "border-b-2 border-transparent capitalize focus:outline-none hover:text-gray-500 text-sm",
               {
                 "border-red-900": i18n.language === language,
               }

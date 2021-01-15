@@ -1,3 +1,4 @@
+import { useState } from "react";
 import classNames from "classnames";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
@@ -10,6 +11,7 @@ const getHref = (page) => (page === "gallery" ? "/" : `/${page}`);
 function Navigation({ t, i18n }) {
   const router = useRouter();
   const pages = ["gallery", "plans", "about", "contact"];
+  const [active, setActive] = useState(false);
 
   return (
     <nav>
@@ -36,15 +38,34 @@ function Navigation({ t, i18n }) {
             </Link>
           );
         })}
-        <div className={"grid grid-row-2 sm:hidden"}>
-          <div className={"content-start flex flex-wrap"}>
-            <LanguageButton />
-          </div>
-          <div className="relative flex items-end h-16">
-            <div className="inset-y-0 left-0 flex">
-              <button className="border-2 border-red-900 hover:border-red-800 font-bold px-4 py-2 rounded text-red-900 hover:text-red-800 text-white uppercase">
-                Menu
-              </button>
+        <div className={"flex flex-col justify-between sm:hidden"}>
+          <LanguageButton />
+          <div className="relative">
+            <button
+              onClick={() => setActive(!active)}
+              className="border-2 border-red-900 hover:border-red-800 font-bold px-4 py-2 rounded mt-6 text-red-900 hover:text-red-800 text-white uppercase"
+            >
+              Menu
+            </button>
+            <div className={"absolute flex flex-col w-20"}>
+              {active &&
+                pages.map((page) => {
+                  const isActivePage = router.pathname === getHref(page);
+                  return (
+                    <Link key={page} href={getHref(page)}>
+                      <a
+                        className={classNames(
+                          "bg-white border-b-2 border-transparent bottom-0 capitalize focus:outline-none hover:text-gray-500 text-lg z-50",
+                          {
+                            "border-red-900": isActivePage,
+                          }
+                        )}
+                      >
+                        {t(page)}
+                      </a>
+                    </Link>
+                  );
+                })}
             </div>
           </div>
         </div>
