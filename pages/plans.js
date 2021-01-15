@@ -11,7 +11,7 @@ function Plans({ t }) {
     <>
       <Head title={t("title")} />
       <main>
-        <div className="container gap-x-32 grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto">
+        <div className="gap-x-32 grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-7px sm:mx-auto">
           <h1 className="border-b-2 border-red-900 col-span-2 font-bold mb-8 text-2xl">
             {t("house-title")}
           </h1>

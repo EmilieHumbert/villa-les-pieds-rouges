@@ -21,7 +21,7 @@ function ContactForm({ t }) {
   };
   return (
     <main>
-      <div className="container grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto gap-x-32">
+      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-7px sm:mx-auto gap-x-32 w-mobile">
         <h1 className="border-b-2 border-red-900 col-span-2 font-bold mb-8 text-2xl">
           {t("title")}
         </h1>

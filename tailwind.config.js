@@ -35,9 +35,13 @@ module.exports = {
       minWidth: {
         "6rem": "6rem",
       },
+      spacing: {
+        "7px": "7px",
+      },
       width: {
         sm: "186.66px",
         md: "504px",
+        menu: "74px",
       },
     },
   },

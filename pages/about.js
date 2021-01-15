@@ -10,7 +10,7 @@ function About({ t }) {
   return (
     <>
       <Head title={t("title")} />
-      <div className="container grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto lg:gap-32">
+      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-7px sm:mx-auto lg:gap-32">
         <div className="col-span-2">
           <AboutTheVilla />
           <br />
