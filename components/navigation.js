@@ -15,7 +15,7 @@ function Navigation({ t, i18n }) {
 
   return (
     <nav className={"mx-7px"}>
-      <div className="flex items-end justify-between mx-auto max-w-xl lg:max-w-4xl mt-m sm:mt-20 mt-8 mb-8 sm:mb-32 space-x-10 sm:space-x-18 lg:space-x-30">
+      <div className="relative flex items-end justify-between mx-auto max-w-xl lg:max-w-4xl mt-m sm:mt-20 mt-8 mb-8 sm:mb-32 space-x-2 sm:space-x-18 lg:space-x-30">
         <Link href="/">
           <a className="bg-red-900 hover:bg-red-800 font-sans h-24 sm:h-36 p-2 text-md sm:text-3xl text-white w-24 min-w-6rem sm:w-36 ">
             <div>Villa les Pieds Rouges</div>
@@ -49,7 +49,7 @@ function Navigation({ t, i18n }) {
             </button>
             <div
               className={classNames(
-                " absolute bg-white flex flex-col -left-32 pt-4 pb-4 space-y-6 w-menu z-50",
+                "absolute bg-white flex flex-col -left-32 pt-4 pb-4 space-y-6 w-menu z-50",
                 { "border-2 border-red-900": active }
               )}
             >
@@ -77,6 +77,13 @@ function Navigation({ t, i18n }) {
             </div>
           </div>
         </div>
+      </div>
+      <div
+        className={
+          "absolute top-0 right-0 mt-8 mr-8 hidden sm:flex sm: content-start sm:justify-between"
+        }
+      >
+        <LanguageButton />
       </div>
     </nav>
   );
