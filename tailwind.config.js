@@ -41,7 +41,7 @@ module.exports = {
       width: {
         sm: "186.66px",
         md: "504px",
-        menu: "186px",
+        menu: "185px",
       },
     },
   },
