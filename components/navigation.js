@@ -43,7 +43,7 @@ function Navigation({ t, i18n }) {
           <div className="relative">
             <button
               onClick={() => setActive(!active)}
-              className="border-2 border-red-900 hover:border-red-800 font-bold px-4 py-2 rounded mt-6 text-red-900 hover:text-red-800 text-white uppercase"
+              className="border-2 border-red-900 hover:border-red-800 focus:outline-none font-bold px-4 py-2 rounded mt-6 text-red-900 hover:text-red-800 text-white uppercase"
             >
               Menu
             </button>
