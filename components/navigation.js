@@ -48,9 +48,10 @@ function Navigation({ t, i18n }) {
               Menu
             </button>
             <div
-              className={
-                "absolute bg-white flex flex-col -left-28 space-y-6 w-menu"
-              }
+              className={classNames(
+                " absolute bg-white flex flex-col -left-28 pt-4 pb-4 space-y-6 w-menu z-50",
+                { "border-2 border-red-900": active }
+              )}
             >
               {active &&
                 pages.map((page) => {
@@ -59,7 +60,7 @@ function Navigation({ t, i18n }) {
                     <Link key={page} href={getHref(page)}>
                       <a
                         className={classNames(
-                          "bg-white border-b-2 border-transparent bottom-0 capitalize focus:outline-none mt-6 pl-2 hover:text-gray-500 text-2xl z-50",
+                          "bg-white bottom-0 capitalize focus:outline-none pl-4 hover:text-gray-500 text-2xl",
                           {
                             "bg-gray-300": isActivePage,
                           }
