@@ -60,6 +60,9 @@ function Navigation({ t, i18n }) {
                             "bg-gray-300": isActivePage,
                           }
                         )}
+                        onClick={() => {
+                          setActive(!active);
+                        }}
                       >
                         {t(page)}
                       </a>
