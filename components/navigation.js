@@ -40,7 +40,7 @@ function Navigation({ t, i18n }) {
         })}
         <div className={"flex flex-col justify-between sm:hidden"}>
           <LanguageButton />
-          <div className="relative">
+          <div>
             <button
               onClick={() => setActive(!active)}
               className="border-2 border-red-900 hover:border-red-800 focus:outline-none font-bold px-4 py-2 rounded mt-6 text-red-900 hover:text-red-800 text-white uppercase"
@@ -49,7 +49,7 @@ function Navigation({ t, i18n }) {
             </button>
             <div
               className={classNames(
-                "absolute bg-white flex flex-col -left-32 w-menu z-50",
+                "absolute bg-white flex flex-col left-0 right-0 -mt-0.5 w-auto z-50",
                 { "border-2 border-red-900": active }
               )}
             >
@@ -62,7 +62,7 @@ function Navigation({ t, i18n }) {
                         className={classNames(
                           "bg-white bottom-0 capitalize focus:outline-none pt-4 pb-4 pl-4 pr-4 hover:text-gray-500 text-2xl",
                           {
-                            "bg-gray-300": isActivePage,
+                            "bg-gray-100": isActivePage,
                           }
                         )}
                         onClick={() => {
