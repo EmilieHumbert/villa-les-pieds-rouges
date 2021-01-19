@@ -6,10 +6,10 @@ import ContactForm from "../components/contactForm";
 
 function Contact({ t }) {
   return (
-    <>
+    <main>
       <Head title={t("title")} />
       <ContactForm />
-    </>
+    </main>
   );
 }
 

@@ -10,13 +10,13 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <main>
       <Head>
         <title>Villa les pieds rouges</title>
       </Head>
       <Navigation />
       <Component {...pageProps} />
-    </>
+    </main>
   );
 }
 
