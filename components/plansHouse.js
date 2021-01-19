@@ -2,6 +2,8 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 import { withTranslation } from "../i18n";
+import PlansDetails from "../components/plansDetails";
+import PlansFloor from "../components/plansFloor";
 
 function HousePlans({ t }) {
   const [active, setActive] = useState(0);
@@ -47,47 +49,10 @@ function HousePlans({ t }) {
         )}
       </div>
       <div className="col-span-2 lg:col-span-1 lg:row-start-1 lg:row-span-3 lg:col-start-3 lg:w-sm">
-        <h1 className="border-b-2 border-red-900 col-span-1 font-bold mb-8 text-2xl">
-          {t("details-title")}
-        </h1>
-        {active === 2 && (
-          <p className="leading-normal mb-8 text-xl tracking-wide">
-            {t("details-floor-two-paragraph-one")}
-            <br />
-            <br />
-            {t("details-floor-two-paragraph-two")}
-            <br />
-            {t("details-floor-two-paragraph-three")}
-          </p>
-        )}
-        {active === 1 && (
-          <p className="leading-normal mb-8 text-xl tracking-wide">
-            {t("details-floor-one-paragraph-one")}
-            <br />
-            {t("details-floor-one-paragraph-two")}
-          </p>
-        )}
-        {active === 0 && (
-          <p className="leading-normal mb-8 text-xl tracking-wide">
-            {t("details-floor-three-paragraph-one")}
-            <br />
-            {t("details-floor-three-paragraph-two")}
-          </p>
-        )}
+        <PlansDetails activeState={[active]} />
       </div>
       <div className="col-span-2 lg:col-span-3 row-2 contentSection">
-        <h1 className="border-b-2 border-red-900 font-bold mb-8 mt-8 text-2xl">
-          {t("floor-title")}
-        </h1>
-        {active === 2 && (
-          <div className="bg-second bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
-        )}
-        {active === 1 && (
-          <div className="bg-first bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
-        )}
-        {active === 0 && (
-          <div className="bg-ground bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
-        )}
+        <PlansFloor activeState={[active]} />
       </div>
     </div>
   );
