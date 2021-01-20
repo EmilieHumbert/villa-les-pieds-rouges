@@ -8,9 +8,9 @@ import AboutUs from "../components/aboutUs";
 
 function About({ t }) {
   return (
-    <main>
+    <main className="mx-7px">
       <Head title={t("title")} />
-      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-7px sm:mx-auto lg:gap-32">
+      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto lg:gap-32">
         <div className="col-span-2">
           <AboutTheVilla />
           <br />

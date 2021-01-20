@@ -7,9 +7,9 @@ import ContactDetails from "../components/contactDetails";
 
 function Contact({ t }) {
   return (
-    <main>
+    <main className="mx-7px">
       <Head title={t("title")} />
-      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-7px sm:mx-auto gap-x-32 w-mobile">
+      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto gap-x-32 w-mobile">
         <ContactForm />
         <div className="col-span-2 lg:col-span-1 lg:row-start-1 lg:row-span-3 lg:col-start-3 lg:w-sm">
           <ContactDetails />

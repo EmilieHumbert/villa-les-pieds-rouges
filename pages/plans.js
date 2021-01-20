@@ -7,7 +7,7 @@ import HousePlans from "../components/plansHouse";
 
 function Plans({ t }) {
   return (
-    <main>
+    <main className="mx-7px">
       <Head title={t("title")} />
       <HousePlans />
     </main>
