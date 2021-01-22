@@ -15,7 +15,7 @@ function ContactForm({ t }) {
 
   const onSubmit = (data) => {
     axios
-      .post("https://formspree.io/f/xeqprbrl", data)
+      .post("/api/contact", data)
       .then((response) => setcomplete(true))
       .catch((error) => console.log("error"));
   };
@@ -25,7 +25,7 @@ function ContactForm({ t }) {
         {t("title")}
       </h1>
       {complete ? (
-        <div>{t("submit")}</div>
+        <div>{t("submitted")}</div>
       ) : (
         <>
           <div className="col-span-2">
@@ -52,7 +52,7 @@ function ContactForm({ t }) {
                 </label>
                 <input
                   className="appearance-none focus:outline-none focus:shadow-outline border border-gray-300 leading-tight px-3 py-2 rounded text-gray-700 w-full"
-                  name="_replyto"
+                  name="email"
                   placeholder={t("email-example")}
                   ref={register({ required: true })}
                   type="email"
