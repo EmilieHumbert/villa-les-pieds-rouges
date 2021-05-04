@@ -10,12 +10,12 @@ function Home() {
       <div>
         <MyCarousel
           slideNames={[
-            "bedroom",
-            "beachView",
-            "houses",
+            "frontHouse",
+            "backHouse",
+            "laSud",
+            "kitchen",
             "livingroom",
-            "ocean",
-            "stairs",
+            "livingroomSunset",
           ]}
         />
       </div>

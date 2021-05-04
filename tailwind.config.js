@@ -11,16 +11,19 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: (theme) => ({
-        bedroom: "url('/images/bedroom.jpeg')",
-        beachView: 'url("/images/beach-view.jpeg")',
-        houses: 'url("/images/houses.jpeg")',
-        livingroom: 'url("/images/livingroom.jpeg")',
-        ocean: 'url("/images/ocean.jpeg")',
-        stairs: 'url("/images/stairs.jpeg")',
-        first: 'url("/images/first-floor.jpeg")',
-        second: 'url("/images/second-floor.jpeg")',
-        ground: 'url("/images/ground-floor.jpeg")',
+        planFirst: 'url("/images/plan-first-floor.jpg")',
+        planSecond: 'url("/images/plan-second-floor.jpg")',
+        planGround: 'url("/images/plan-ground-floor.jpg")',
         fullHouse: 'url("/images/les-pieds-rouges.jpeg")',
+        frontHouse: 'url("/images/front-house.jpg")',
+        backHouse: 'url("/images/back-house.jpg")',
+        laSud: 'url("/images/la-sud.jpg")',
+        kitchen: 'url("/images/cuisine.jpg")',
+        livingroom: 'url("/images/salon.jpg")',
+        livingroomSunset: 'url("/images/salon-couche-soleil.jpg")',
+        bedroomFirstFloorBeachSide:
+          'url("/images/bedroom-first-floor-beach-side.jpeg")',
+        bedroomFirstFloorPatio: 'url("/images/bedroom-first-floor-patio.jpeg")',
       }),
       height: {
         md: "30rem",

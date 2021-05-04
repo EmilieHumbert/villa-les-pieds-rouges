@@ -10,13 +10,13 @@ function PlansFloor({ activeState: [active], t }) {
         {t("floor-title")}
       </h1>
       {active === 2 && (
-        <div className="bg-second bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
+        <div className="bg-planSecond bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
       )}
       {active === 1 && (
-        <div className="bg-first bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
+        <div className="bg-planFirst bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
       )}
       {active === 0 && (
-        <div className="bg-ground bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
+        <div className="bg-planGround bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
       )}
     </>
   );
