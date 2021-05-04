@@ -66,8 +66,7 @@ function ContactForm({ t }) {
                 <textarea
                   className="appearance-none focus:outline-none focus:shadow-outline border border-gray-300 leading-tight px-3 py-2 rounded text-gray-700 w-full"
                   name="message"
-                  placeholder="Message"
-                  ref={register({ required: true })}
+                  placeholder={t("messagePlaceholder")}
                   rows="6"
                 />
                 {errors.message && <p>{t("required")}</p>}

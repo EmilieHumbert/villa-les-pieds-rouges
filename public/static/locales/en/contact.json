@@ -9,8 +9,9 @@
   "email": "Email",
   "email-example": "johnsmith@example.com",
   "message": "Message",
+  "messagePlaceholder": "Hello, I have a question regarding...",
   "submit-button": "Submit",
   "details-title": "Details",
-  "details-text": "Les Pieds Rouges, Hossegor, France",
+  "details-text": "Les Pieds Rouges, Soorts-Hossegor, Nouvelle-Aquitaine, France",
   "details-google-map-link": "(Google Map)"
 }
