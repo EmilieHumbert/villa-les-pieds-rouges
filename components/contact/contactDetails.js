@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import { withTranslation } from "../i18n";
+import { withTranslation } from "../../i18n";
 
 function ContactDetails({ t }) {
   return (

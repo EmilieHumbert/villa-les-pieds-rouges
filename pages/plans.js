@@ -3,7 +3,7 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 
 import { withTranslation } from "../i18n";
-import HousePlans from "../components/plansHouse";
+import HousePlans from "../components/plans/plansHouse";
 
 function Plans({ t }) {
   return (

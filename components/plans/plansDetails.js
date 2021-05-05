@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-import { withTranslation } from "../i18n";
+import { withTranslation } from "../../i18n";
 
 function PlansDetails({ activeState: [active], t }) {
   return (

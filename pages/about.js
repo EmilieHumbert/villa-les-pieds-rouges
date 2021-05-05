@@ -2,9 +2,9 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 
 import { withTranslation } from "../i18n";
-import KeyDates from "../components/aboutKeyDates";
-import AboutTheVilla from "../components/aboutTheVilla";
-import AboutUs from "../components/aboutUs";
+import KeyDates from "../components/about/aboutKeyDates";
+import AboutTheVilla from "../components/about/aboutTheVilla";
+import AboutUs from "../components/about/aboutUs";
 
 function About({ t }) {
   return (

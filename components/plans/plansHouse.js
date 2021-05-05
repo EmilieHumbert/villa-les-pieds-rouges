@@ -1,9 +1,9 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-import { withTranslation } from "../i18n";
-import PlansDetails from "../components/plansDetails";
-import PlansFloor from "../components/plansFloor";
+import { withTranslation } from "../../i18n";
+import PlansDetails from "./plansDetails";
+import PlansFloor from "./plansFloor";
 
 function HousePlans({ t }) {
   const [active, setActive] = useState(0);

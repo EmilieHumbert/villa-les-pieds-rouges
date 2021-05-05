@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import PropTypes from "prop-types";
-import Error from "./error";
+import Error from "../error";
 
-import { withTranslation } from "../i18n";
+import { withTranslation } from "../../i18n";
 
 function ContactForm({ t }) {
   const { handleSubmit, errors, formState, register } = useForm({
