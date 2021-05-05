@@ -18,9 +18,9 @@ module.exports = {
         frontHouse: 'url("/images/front-house.jpg")',
         backHouse: 'url("/images/back-house.jpg")',
         laSud: 'url("/images/la-sud.jpg")',
-        kitchen: 'url("/images/cuisine.jpg")',
-        livingroom: 'url("/images/salon.jpg")',
-        livingroomSunset: 'url("/images/salon-couche-soleil.jpg")',
+        kitchen: 'url("/images/kitchen.jpg")',
+        livingroom: 'url("/images/livingroom.jpg")',
+        livingroomSunset: 'url("/images/livingroomSunset.jpg")',
         bedroomFirstFloorBeachSide:
           'url("/images/bedroom-first-floor-beach-side.jpeg")',
         bedroomFirstFloorPatio: 'url("/images/bedroom-first-floor-patio.jpeg")',
