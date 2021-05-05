@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import PropTypes from "prop-types";
+import Error from "./error";
 
 import { withTranslation } from "../i18n";
 
@@ -12,13 +13,15 @@ function ContactForm({ t }) {
   const { isSubmitSuccessful, isSubmitting } = formState;
 
   const [complete, setcomplete] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const onSubmit = (data) => {
     axios
       .post("/api/contact", data)
       .then((response) => setcomplete(true))
-      .catch((error) => console.log("error"));
+      .catch((error) => setErrorMessage(error.message));
   };
+
   return (
     <>
       <h1 className="border-b-2 border-red-900 col-span-2 font-bold mb-8 text-2xl">
@@ -44,7 +47,7 @@ function ContactForm({ t }) {
                   ref={register({ required: true })}
                   type="text"
                 />
-                {errors.fullName && <p>{t("required")}</p>}
+                {errors.fullName && <Error message={t("required")} />}
               </div>
               <div className="mb-6">
                 <label className="block uppercase tracking-wide text-sm font-bold mb-2">
@@ -57,7 +60,7 @@ function ContactForm({ t }) {
                   ref={register({ required: true })}
                   type="email"
                 />
-                {errors._replyto && <p>{t("required")}</p>}
+                {errors.email && <Error message={t("required")} />}
               </div>
               <div className="mb-6">
                 <label className="block uppercase tracking-wide text-sm font-bold mb-2">
@@ -67,10 +70,12 @@ function ContactForm({ t }) {
                   className="appearance-none focus:outline-none focus:shadow-outline border border-gray-300 leading-tight px-3 py-2 rounded text-gray-700 w-full"
                   name="message"
                   placeholder={t("messagePlaceholder")}
+                  ref={register({ required: true })}
                   rows="6"
                 />
-                {errors.message && <p>{t("required")}</p>}
+                {errors.message && <Error message={t("required")} />}
               </div>
+              {errorMessage && <Error message={errorMessage} />}
               <input
                 name="_subject"
                 ref={register}
