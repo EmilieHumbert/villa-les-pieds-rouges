@@ -2,6 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 import { withTranslation } from "../../i18n";
+import classNames from "classnames";
 
 function PlansFloor({ activeState: [active], t }) {
   return (
@@ -9,15 +10,24 @@ function PlansFloor({ activeState: [active], t }) {
       <h1 className="border-b-2 border-red-900 font-bold mb-8 mt-8 text-2xl">
         {t("floor-title")}
       </h1>
-      {active === 2 && (
-        <div className="bg-planSecond bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
-      )}
-      {active === 1 && (
-        <div className="bg-planFirst bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
-      )}
-      {active === 0 && (
-        <div className="bg-planGround bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl"></div>
-      )}
+      {[
+        ["bg-planSecond", 2],
+        ["bg-planFirst", 1],
+        ["bg-planGround", 0],
+      ].map(([bgClassName, floorNumber]) => {
+        if (active === floorNumber) {
+          return (
+            <div
+              className={classNames(
+                "bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl",
+                active === floorNumber ? bgClassName : ""
+              )}
+            ></div>
+          );
+        } else {
+          return null;
+        }
+      })}
     </>
   );
 }
