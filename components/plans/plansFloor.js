@@ -1,33 +1,28 @@
-import { useState } from "react";
+import Image from "next/image";
 import PropTypes from "prop-types";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 import { withTranslation } from "../../i18n";
-import classNames from "classnames";
 
 function PlansFloor({ activeState: [active], t }) {
+  const floorNames = ["Ground", "First", "Second"];
   return (
     <>
       <h1 className="border-b-2 border-red-900 font-bold mb-8 mt-8 text-2xl">
         {t("floor-title")}
       </h1>
-      {[
-        ["bg-planSecond", 2],
-        ["bg-planFirst", 1],
-        ["bg-planGround", 0],
-      ].map(([bgClassName, floorNumber]) => {
-        if (active === floorNumber) {
-          return (
-            <div
-              className={classNames(
-                "bg-contain bg-top bg-no-repeat col-span-2 content h-xl w-xl",
-                active === floorNumber ? bgClassName : ""
-              )}
-            ></div>
-          );
-        } else {
-          return null;
-        }
-      })}
+      <div className="col-span-2 content">
+        <Zoom>
+          <Image
+            alt={`${floorNames[active]} floor plan`}
+            src={`/images/plan-${floorNames[active].toLowerCase()}-floor.jpg`}
+            width={1440}
+            height={1018}
+            responsive
+          />
+        </Zoom>
+      </div>
     </>
   );
 }
