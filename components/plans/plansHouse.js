@@ -25,7 +25,7 @@ function HousePlans({ t, active, setActive }) {
             className={classNames(
               "absolute h-1/6 left-1/3 lg:left-2 w-2/6 lg:w-48",
               "bg-opacity-50 bg-white focus:outline-none",
-              "border-4 border-double border-opacity-50 border-red-900 rounded-lg",
+              "border-2 border-opacity-50 border-red-900 rounded-lg",
               positionClassName,
               active === floorNumber ? "bg-opacity-75 border-47" : ""
             )}
