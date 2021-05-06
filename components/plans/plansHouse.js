@@ -20,6 +20,7 @@ function HousePlans({ t, active, setActive }) {
           [`${t("ground-floor")}`, "bottom-1/6", 0],
         ].map(([label, positionClassName, floorNumber]) => (
           <button
+            key={floorNumber}
             onClick={() => setActive(floorNumber)}
             className={classNames(
               "absolute h-1/6 left-1/3 lg:left-2 w-2/6 lg:w-48",
