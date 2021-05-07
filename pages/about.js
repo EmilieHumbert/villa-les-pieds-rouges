@@ -1,12 +1,14 @@
 import Head from "next/head";
-import PropTypes from "prop-types";
 
-import { withTranslation } from "../i18n";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import KeyDates from "../components/about/aboutKeyDates";
 import AboutTheVilla from "../components/about/aboutTheVilla";
 import AboutUs from "../components/about/aboutUs";
 
-function About({ t }) {
+function About() {
+  const { t } = useTranslation("about");
+
   return (
     <main className="mx-7px">
       <Head title={t("title")} />
@@ -24,11 +26,10 @@ function About({ t }) {
   );
 }
 
-About.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-About.getInitialProps = async () => ({
-  namespacesRequired: ["about", "navigation"],
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["about", "navigation"])),
+  },
 });
 
-export default withTranslation("about")(About);
+export default About;

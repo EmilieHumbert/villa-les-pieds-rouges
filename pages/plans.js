@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import PropTypes from "prop-types";
 
-import { withTranslation } from "../i18n";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import HousePlans from "../components/plans/plansHouse";
 import PlansDetails from "../components/plans/plansDetails";
 import PlansFloor from "../components/plans/plansFloor";
 
-function Plans({ t }) {
+function Plans() {
+  const { t } = useTranslation("plans");
   const [active, setActive] = useState(0);
   return (
     <main className="mx-7px">
@@ -27,11 +28,10 @@ function Plans({ t }) {
   );
 }
 
-Plans.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-Plans.getInitialProps = async () => ({
-  namespacesRequired: ["navigation", "plans"],
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["plans", "navigation"])),
+  },
 });
 
-export default withTranslation("plans")(Plans);
+export default Plans;

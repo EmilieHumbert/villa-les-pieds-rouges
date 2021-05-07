@@ -1,14 +1,15 @@
 import { useState } from "react";
-import classNames from "classnames";
 import { useRouter } from "next/router";
-import PropTypes from "prop-types";
+import Link from "next/link";
 
-import { Link, withTranslation } from "../i18n";
+import classNames from "classnames";
+import { useTranslation } from "next-i18next";
 import LanguageButton from "../components/languageButton";
 
 const getHref = (page) => (page === "gallery" ? "/" : `/${page}`);
 
-function Navigation({ t, i18n }) {
+export default function Navigation() {
+  const { t } = useTranslation("navigation");
   const router = useRouter();
   const pages = ["gallery", "plans", "about", "contact"];
   const [active, setActive] = useState(false);
@@ -88,9 +89,3 @@ function Navigation({ t, i18n }) {
     </nav>
   );
 }
-
-Navigation.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-
-export default withTranslation("navigation")(Navigation);

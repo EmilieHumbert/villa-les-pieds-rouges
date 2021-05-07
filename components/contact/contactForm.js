@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+
 import axios from "axios";
-import PropTypes from "prop-types";
 import Error from "../error";
+import { useTranslation } from "next-i18next";
 
-import { withTranslation } from "../../i18n";
+export default function ContactForm() {
+  const { t } = useTranslation("contact");
 
-function ContactForm({ t }) {
   const { handleSubmit, errors, formState, register } = useForm({
     defaultValues: {},
   });
@@ -102,9 +103,3 @@ function ContactForm({ t }) {
     </>
   );
 }
-
-ContactForm.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-
-export default withTranslation("contact")(ContactForm);

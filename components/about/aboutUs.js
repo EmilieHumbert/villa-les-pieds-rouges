@@ -1,8 +1,8 @@
-import PropTypes from "prop-types";
+import { useTranslation } from "next-i18next";
 
-import { withTranslation } from "../../i18n";
+export default function AboutUs() {
+  const { t } = useTranslation("about");
 
-function AboutUs({ t }) {
   return (
     <>
       <h1 className="border-b-2 border-red-900 font-bold mb-8 my-2 text-2xl">
@@ -17,9 +17,3 @@ function AboutUs({ t }) {
     </>
   );
 }
-
-AboutUs.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-
-export default withTranslation("about")(AboutUs);

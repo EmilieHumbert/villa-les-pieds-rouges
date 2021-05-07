@@ -1,12 +1,13 @@
 import Image from "next/image";
-import PropTypes from "prop-types";
+
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import { useTranslation } from "next-i18next";
 
-import { withTranslation } from "../../i18n";
-
-function PlansFloor({ activeState: [active], t }) {
+export default function PlansFloor({ activeState: [active] }) {
   const floorNames = ["Ground", "First", "Second"];
+  const { t } = useTranslation("plans");
+
   return (
     <>
       <h1 className="border-b-2 border-red-900 font-bold mb-8 mt-8 text-2xl">
@@ -19,16 +20,9 @@ function PlansFloor({ activeState: [active], t }) {
             src={`/images/plan-${floorNames[active].toLowerCase()}-floor.jpg`}
             width={1440}
             height={1018}
-            responsive
           />
         </Zoom>
       </div>
     </>
   );
 }
-
-PlansFloor.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-
-export default withTranslation("plans")(PlansFloor);

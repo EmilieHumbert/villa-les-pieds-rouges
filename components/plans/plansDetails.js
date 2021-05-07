@@ -1,9 +1,10 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 
-import { withTranslation } from "../../i18n";
+import { useTranslation } from "next-i18next";
 
-function PlansDetails({ activeState: [active], t }) {
+export default function PlansDetails({ activeState: [active] }) {
+  const { t } = useTranslation("plans");
+
   return (
     <>
       <h1 className="border-b-2 border-red-900 col-span-1 font-bold mb-8 text-2xl">
@@ -36,9 +37,3 @@ function PlansDetails({ activeState: [active], t }) {
     </>
   );
 }
-
-PlansDetails.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-
-export default withTranslation("plans")(PlansDetails);

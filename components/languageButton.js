@@ -1,27 +1,31 @@
-import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import { withTranslation } from "../i18n";
+import { useRouter } from "next/router";
 
-function LanguageButton({ i18n }) {
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+export default function LanguageButton() {
   const languages = ["en", "fr"];
+  const router = useRouter();
 
   return (
     <div className="content-start text-right lg:max-w-4xl">
-      {languages.flatMap((language, index) => {
+      {languages.flatMap((locale, index) => {
         return [
           <button
-            onClick={() => i18n.changeLanguage(language)}
-            key={language}
+            onClick={() =>
+              router.push(router.asPath, router.asPath, { locale })
+            }
+            key={locale}
             type="button"
             className={classNames(
               "border-b-2 border-transparent capitalize focus:outline-none hover:text-gray-500 text-sm",
               {
-                "border-red-900": i18n.language === language,
+                "border-red-900": router.locale === locale,
               }
             )}
           >
-            {language.toUpperCase()}
+            {locale.toUpperCase()}
           </button>,
           index < languages.length - 1 ? " / " : null,
         ];
@@ -30,8 +34,8 @@ function LanguageButton({ i18n }) {
   );
 }
 
-LanguageButton.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-
-export default withTranslation("navigation")(LanguageButton);
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["navigation"])),
+  },
+});

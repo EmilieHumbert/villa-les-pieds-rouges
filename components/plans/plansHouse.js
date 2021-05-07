@@ -1,10 +1,9 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-
-import { withTranslation } from "../../i18n";
+import { useTranslation } from "next-i18next";
 import classNames from "classnames";
 
-function HousePlans({ t, active, setActive }) {
+export default function HousePlans({ active, setActive }) {
+  const { t } = useTranslation("plans");
+
   return (
     <>
       <h1 className="border-b-2 border-red-900 col-span-2 font-bold mb-8 text-2xl">
@@ -37,9 +36,3 @@ function HousePlans({ t, active, setActive }) {
     </>
   );
 }
-
-HousePlans.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-
-export default withTranslation("plans")(HousePlans);
