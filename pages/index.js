@@ -16,20 +16,18 @@ function Home() {
         <title>Home</title>
       </Head>
       <div>
-        <Link href="/" locale={router.locale === "fr" ? "en" : "fr"}>
-          <MyCarousel
-            slideNames={[
-              "frontHouse",
-              "backHouse",
-              "laSud",
-              "kitchen",
-              "livingroom",
-              "livingroomSunset",
-            ]}
-          />
-        </Link>
+        <MyCarousel
+          slideNames={[
+            "frontHouse",
+            "backHouse",
+            "laSud",
+            "kitchen",
+            "livingroom",
+            "livingroomSunset",
+          ]}
+        />
       </div>
-      <div className="text-center text-base sm:text-lg md:text-xl mt-10">
+      <div className=" mx-auto max-w-xl lg:max-w-4xl text-center text-base sm:text-lg md:text-xl mt-32">
         {t("intro")}
       </div>
     </main>

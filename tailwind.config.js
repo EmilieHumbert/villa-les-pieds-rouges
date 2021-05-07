@@ -26,6 +26,8 @@ module.exports = {
         bedroomFirstFloorPatio: 'url("/images/bedroom-first-floor-patio.jpeg")',
       }),
       height: {
+        square: "calc(calc(100vw - 100px - 4rem)/3)",
+        smallsquare: "calc(100vw - 50px - 2rem)",
         xs: "20rem",
         md: "30rem",
         lg: "35rem",
