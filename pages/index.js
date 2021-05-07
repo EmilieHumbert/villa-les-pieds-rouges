@@ -29,6 +29,9 @@ function Home() {
           />
         </Link>
       </div>
+      <div className="text-center text-base sm:text-lg md:text-xl mt-10">
+        {t("intro")}
+      </div>
     </main>
   );
 }
