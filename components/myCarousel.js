@@ -5,8 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function MyCarousel({ slideNames }) {
   const settings = {
-    arrows: false,
     dots: true,
+    centerMode: true,
+    centerPadding: "50px",
     className: "center",
     infinite: true,
     autoplay: true,
@@ -17,19 +18,9 @@ export default function MyCarousel({ slideNames }) {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
     ],
@@ -41,7 +32,7 @@ export default function MyCarousel({ slideNames }) {
         {slideNames.map((slideName, index) => (
           <div key={index} className="px-2">
             <div
-              className={`h-md md:h-xl w-full bg-${slideName} bg-cover bg-center`}
+              className={`h-xs sm:h-md md:h-xs xl:h-lg w-full bg-${slideName} bg-cover bg-center`}
             ></div>
           </div>
         ))}

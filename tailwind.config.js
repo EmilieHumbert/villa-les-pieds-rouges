@@ -26,6 +26,7 @@ module.exports = {
         bedroomFirstFloorPatio: 'url("/images/bedroom-first-floor-patio.jpeg")',
       }),
       height: {
+        xs: "20rem",
         md: "30rem",
         lg: "35rem",
         xl: "40rem",
