@@ -2,8 +2,6 @@ import classNames from "classnames";
 
 import { useRouter } from "next/router";
 
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
 export default function LanguageButton() {
   const languages = ["en", "fr"];
   const router = useRouter();
@@ -33,9 +31,3 @@ export default function LanguageButton() {
     </div>
   );
 }
-
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["navigation"])),
-  },
-});
