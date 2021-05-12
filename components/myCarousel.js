@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function MyCarousel({ slideNames }) {
+export default function MyCarousel({ slideUrls }) {
   const settings = {
     dots: true,
     arrows: false,
@@ -31,11 +32,17 @@ export default function MyCarousel({ slideNames }) {
   return (
     <div>
       <Slider {...settings}>
-        {slideNames.map((slideName, index) => (
-          <div key={index} className="px-2">
-            <div
-              className={`h-smallsquare sm:h-square w-full bg-${slideName} bg-cover bg-center`}
-            ></div>
+        {slideUrls.map(([slideUrl, description]) => (
+          <div key={description} className="px-2">
+            <div className="relative h-smallsquare sm:h-square">
+              <Image
+                layout="fill"
+                objectFit="cover"
+                src={slideUrl}
+                alt={description}
+                sizes="33vw"
+              />
+            </div>
           </div>
         ))}
       </Slider>
