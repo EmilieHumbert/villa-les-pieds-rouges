@@ -6,12 +6,12 @@ import classNames from "classnames";
 import { useTranslation } from "next-i18next";
 import LanguageButton from "../components/languageButton";
 
-const getHref = (page) => (page === "gallery" ? "/" : `/${page}`);
+const getHref = (page) => (page === "home" ? "/" : `/${page}`);
 
 export default function Navigation() {
   const { t } = useTranslation("navigation");
   const router = useRouter();
-  const pages = ["gallery", "plans", "about", "contact"];
+  const pages = ["home", "gallery", "plans", "about", "contact"];
   const [active, setActive] = useState(false);
 
   return (
@@ -24,14 +24,13 @@ export default function Navigation() {
         </Link>
         {pages.map((page) => {
           const isActivePage = router.pathname === getHref(page);
+
           return (
             <Link key={page} href={getHref(page)}>
               <a
                 className={classNames(
                   "hidden sm:block capitalize hover:text-gray-500 text-lg border-b-2 border-white",
-                  {
-                    "border-red-900": isActivePage,
-                  }
+                  { "border-red-900": isActivePage }
                 )}
               >
                 {t(page)}
@@ -39,7 +38,7 @@ export default function Navigation() {
             </Link>
           );
         })}
-        <div className={"flex flex-col justify-between sm:hidden"}>
+        <div className="flex flex-col justify-between sm:hidden">
           <LanguageButton />
           <div>
             <button
@@ -57,14 +56,13 @@ export default function Navigation() {
               {active &&
                 pages.map((page) => {
                   const isActivePage = router.pathname === getHref(page);
+
                   return (
                     <Link key={page} href={getHref(page)}>
                       <a
                         className={classNames(
                           "bg-white bottom-0 capitalize focus:outline-none pt-4 pb-4 pl-4 pr-4 hover:text-gray-500 text-2xl",
-                          {
-                            "bg-gray-100": isActivePage,
-                          }
+                          { "bg-gray-100": isActivePage }
                         )}
                         onClick={() => {
                           setActive(!active);
