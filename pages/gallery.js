@@ -11,42 +11,42 @@ function Gallery() {
   const { t } = useTranslation("gallery");
 
   const images = [
-    ["/images/front-house.jpg", "Front of the house"],
-    ["/images/patio-trees.jpg", "Trees in the patio"],
+    ["/images/front-house.jpg", `${t("front-house")}`],
+    ["/images/patio-trees.jpg", `${t("patio-trees")}`],
     [
       "/images/livingroom-view-back-table.jpg",
-      "Livingroom with view on the back of the house",
+      `${t("livingroom-view-back-table")}`,
     ],
-    ["/images/la-sud.jpg", "La sud Hossegor"],
+    ["/images/la-sud.jpg", `${t("la-sud")}`],
     [
       "/images/livingroom-two-windows-front.jpg",
-      "Livingroom with view on the beach",
+      `${t("livingroom-two-windows-front")}`,
     ],
-    ["/images/bedroom-three.jpg", "Bedroom"],
-    ["/images/commode.jpg", "Commode"],
-    ["/images/kitchen.jpg", "Kitchen"],
-    ["/images/bedroom-four.jpg", "Bedroom"],
-    ["/images/bedroom-first.jpg", "Bedroom"],
-    ["/images/waves.jpg", "Waves"],
+    ["/images/bedroom-three.jpg", `${t("bedroom-three")}`],
+    ["/images/commode.jpg", `${t("commode")}`],
+    ["/images/kitchen.jpg", `${t("kitchen")}`],
+    ["/images/bedroom-four.jpg", `${t("bedroom-four")}`],
+    ["/images/bedroom-first.jpg", `${t("bedroom-first")}`],
+    ["/images/waves.jpg", `${t("waves")}`],
     [
       "/images/view-livingroom-on-patio-front.jpg",
-      "View from the livingroom to the front patio",
+      `${t("view-livingroom-on-patio-front")}`,
     ],
-    ["/images/bedroom-first-garden.jpg", "Bedroom with garden view"],
-    ["/images/sunset.jpg", "Sunset"],
-    ["/images/bedroom-five.jpg", "Bedroom"],
-    ["/images/corridor.jpg", "Corridor"],
-    ["/images/patio-front.jpg", "Patio front of the house"],
-    ["/images/livingroom-view-corridor.jpg", "Livingroom view on the corridor"],
-    ["/images/bedroom-first-garden-2.jpg", "Bedroom view on garden"],
-    ["/images/patio-front-view-up.jpg", "Patio view from top floor"],
-    ["/images/livingroom.jpg", "Livingroom"],
-    ["/images/patio-back.jpg", "Patio at the back of the house"],
+    ["/images/bedroom-first-garden.jpg", `${t("bedroom-first-garden")}`],
+    ["/images/sunset.jpg", `${t("sunset")}`],
+    ["/images/bedroom-five.jpg", `${t("bedroom-five")}`],
+    ["/images/corridor.jpg", `${t("corridor")}`],
+    ["/images/patio-front.jpg", `${t("patio-front")}`],
     [
-      "/images/livingroom-view-back.jpg",
-      "Livingroom view to the back of the house",
+      "/images/livingroom-view-corridor.jpg",
+      `${t("livingroom-view-corridor")}`,
     ],
-    ["/images/bedroom-second-garden.jpg", "Bedroom with view on garden"],
+    ["/images/bedroom-first-garden-2.jpg", `${t("bedroom-first-garden-2")}`],
+    ["/images/patio-front-view-up.jpg", `${t("patio-front-view-up")}`],
+    ["/images/livingroom.jpg", `${t("livingroom")}`],
+    ["/images/patio-back.jpg", `${t("patio-back")}`],
+    ["/images/livingroom-view-back.jpg", `${t("livingroom-view-back")}`],
+    ["/images/bedroom-second-garden.jpg", `${t("bedroom-second-garden")}`],
   ];
   return (
     <main>
@@ -56,7 +56,7 @@ function Gallery() {
       <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto gap-5 w-mobile">
         {images.map(([image, description]) => {
           return (
-            <div>
+            <div key={description}>
               <Image alt={description} src={image} width="500" height="500" />
             </div>
           );
