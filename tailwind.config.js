@@ -18,7 +18,6 @@ module.exports = {
         bedroomFirst: 'url("/images/bedroom-first.jpg")',
         bedroomFirstGarden: 'url("/images/bedroom-first-garden.jpg")',
         bedroomFirstGardenTwo: 'url("/images/bedroom-first-garden-2.jpg")',
-        bedroomTwo: 'url("/images/bedroom-two.jpg")',
         bedroomSecondGarden: 'url("/images/bedroom-second-garden.jpg")',
         bedroomThree: 'url("/images/bedroom-three.jpg")',
         bedroomFour: 'url("/images/bedroom-four.jpg")',
