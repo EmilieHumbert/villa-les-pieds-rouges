@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import { useTranslation } from "next-i18next";
 
 export default function MyGallery() {
@@ -50,7 +52,9 @@ export default function MyGallery() {
       {images.map(([image, description]) => {
         return (
           <div key={description}>
-            <Image alt={description} src={image} width="500" height="500" />
+            <Zoom>
+              <Image alt={description} src={image} width="500" height="500" />
+            </Zoom>
           </div>
         );
       })}
