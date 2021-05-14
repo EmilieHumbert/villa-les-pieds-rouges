@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import PlansDetails from "../components/plans/plansDetails";
+import PlansDescription from "../components/plans/plansDescription";
 import PlansFloor from "../components/plans/plansFloor";
 
 function Plans() {
@@ -18,7 +18,7 @@ function Plans() {
           <PlansFloor activeState={[active]} setActive={setActive} />
         </div>
         <div className="col-span-2 lg:col-span-3">
-          <PlansDetails activeState={[active]} setActive={setActive} />
+          <PlansDescription activeState={[active]} setActive={setActive} />
         </div>
       </div>
     </main>
