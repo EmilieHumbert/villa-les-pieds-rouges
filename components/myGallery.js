@@ -49,11 +49,12 @@ export default function MyGallery() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto gap-5 w-mobile">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto md:gap-5 gap-x-5 gap-y-5 w-mobile">
         <h1 className="border-b-2 border-red-900 col-span-3 font-bold mb-8 text-2xl">
           {t("title")}
         </h1>
-
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto md:gap-5 gap-x-5 gap-y-5 w-mobile">
         {images.map(([image, description]) => {
           return (
             <div key={description}>
