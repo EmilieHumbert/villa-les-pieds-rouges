@@ -18,19 +18,32 @@ export default function HousePlans({ active, setActive }) {
           [`${t("first-floor")}`, "top-42", 1],
           [`${t("ground-floor")}`, "bottom-1/6", 0],
         ].map(([label, positionClassName, floorNumber]) => (
-          <button
+          <div
             key={floorNumber}
-            onClick={() => setActive(floorNumber)}
             className={classNames(
               "absolute h-1/6 left-1/3 lg:left-2 w-2/6 lg:w-48",
-              "bg-opacity-50 bg-white focus:outline-none",
-              "border-2 border-opacity-50 border-red-900 rounded-lg",
-              positionClassName,
-              active === floorNumber ? "bg-opacity-75 border-47" : ""
+              positionClassName
             )}
           >
-            {label}
-          </button>
+            {floorNumber === 2 && (
+              <span className="absolute flex h-4 w-4 -right-1 -top-1">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-800 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-4 w-4 bg-red-900"></span>
+              </span>
+            )}
+            <button
+              key={floorNumber}
+              onClick={() => setActive(floorNumber)}
+              className={classNames(
+                "w-full h-full",
+                "bg-opacity-50 bg-white focus:outline-none",
+                "border-2 border-opacity-50 border-red-900 rounded-lg",
+                active === floorNumber ? "bg-opacity-75 border-47" : ""
+              )}
+            >
+              {label}
+            </button>
+          </div>
         ))}
       </div>
     </>
