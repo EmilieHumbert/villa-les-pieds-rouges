@@ -1,0 +1,11 @@
+{
+  "title": "location",
+  "locationDescription-title": "Location Description",
+  "locationDescriptionHossegorP1": "Soorts-Hossegor is a town in southwestern France, 20 km (12 miles) north of Biarritz. It is a well known seaside resort that is considered to have some of the best surfing in the world.",
+  "locationDescriptionHossegorP2": "Phasellus sit amet faucibus nunc, eget imperdiet justo. Donec sed elementum dolor. Pellentesque nec ex fermentum, dignissim sem id, tempor mi. Integer pellentesque lacinia lacus, eu fringilla mi facilisis vel. Sed sed dolor enim. Suspendisse facilisis sodales venenatis. Quisque neque nunc, finibus non odio tincidunt, blandit iaculis lorem. Donec sollicitudin auctor felis, sit amet tristique risus iaculis sed. Sed a cursus ex, et convallis metus. Sed elementum id neque hendrerit scelerisque. Integer luctus venenatis lectus et egestas. Integer luctus venenatis lectus et egestas.",
+  "locationDescriptionHossegorP3": "Duis ut sagittis odio, nec interdum arcu. Donec rutrum a purus ac consequat. Proin eget nisl ultrices, feugiat nisi vitae, porttitor mi. Donec nec justo ac libero pellentesque eleifend. Suspendisse et ante in sem egestas hendrerit et in ex. Maecenas at ornare ipsum, quis posuere turpis. Sed non ullamcorper urna. Proin mattis tortor lorem, elementum interdum mi lobortis at. Proin dictum quis magna id semper. Sed non facilisis ex. Duis hendrerit, quam vel hendrerit imperdiet, lorem justo aliquet purus, vestibulum rhoncus eros augue et dui. Aenean sollicitudin viverra massa ac mattis.",
+  "locationDescriptionImage": "A man surfing",
+  "locationMap-title": "Address",
+  "locationMap-text": "Les Pieds Rouges, Soorts-Hossegor, Nouvelle-Aquitaine, France",
+  "locationMap-google-map-link": "(Google Map)"
+}
