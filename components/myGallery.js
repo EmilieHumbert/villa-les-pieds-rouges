@@ -48,16 +48,22 @@ export default function MyGallery() {
   ];
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto gap-5 w-mobile">
-      {images.map(([image, description]) => {
-        return (
-          <div key={description}>
-            <Zoom>
-              <Image alt={description} src={image} width="500" height="500" />
-            </Zoom>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto gap-5 w-mobile">
+        <h1 className="border-b-2 border-red-900 col-span-3 font-bold mb-8 text-2xl">
+          {t("title")}
+        </h1>
+
+        {images.map(([image, description]) => {
+          return (
+            <div key={description}>
+              <Zoom>
+                <Image alt={description} src={image} width="500" height="500" />
+              </Zoom>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
