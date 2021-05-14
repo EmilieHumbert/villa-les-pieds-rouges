@@ -11,7 +11,7 @@ const getHref = (page) => (page === "home" ? "/" : `/${page}`);
 export default function Navigation() {
   const { t } = useTranslation("navigation");
   const router = useRouter();
-  const pages = ["home", "gallery", "plans", "about", "contact"];
+  const pages = ["home", "gallery", "plans", "about", "location", "contact"];
   const [active, setActive] = useState(false);
 
   return (
