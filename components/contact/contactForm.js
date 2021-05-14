@@ -25,14 +25,14 @@ export default function ContactForm() {
 
   return (
     <>
-      <h1 className="border-b-2 border-red-900 col-span-2 font-bold mb-8 text-2xl">
+      <h1 className="border-b-2 border-red-900 col-span-3 font-bold mb-8 text-2xl">
         {t("title")}
       </h1>
       {complete ? (
         <div>{t("submitted")}</div>
       ) : (
         <>
-          <div className="col-span-2">
+          <div className="col-span-3">
             <p className="leading-normal mb-8 text-xl tracking-wide">
               {t("text")}
             </p>
@@ -85,7 +85,7 @@ export default function ContactForm() {
               ></input>
               <div className="flex items-center justify-between">
                 <button
-                  className="border border-black text-black font-bold hover:bg-gray-100 mb-8 px-4 py-2 rounded uppercase"
+                  className="border-2 border-red-900 text-black font-bold hover:bg-gray-100 mb-8 px-4 py-2 rounded uppercase"
                   type="submit"
                   disabled={isSubmitting || isSubmitSuccessful}
                 >
