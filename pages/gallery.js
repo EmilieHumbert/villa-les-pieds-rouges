@@ -10,8 +10,8 @@ function Gallery() {
   const { t } = useTranslation("gallery");
 
   return (
-    <main>
-      <Head>
+    <main className="mx-7px">
+      <Head title={t("title")}>
         <title>Gallery</title>
       </Head>
       <MyGallery />
