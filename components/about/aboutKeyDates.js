@@ -22,7 +22,7 @@ export default function KeyDates() {
         <li className="leading-normal mb-8 text-lg tracking-wide">
           <b>{t("date-four")}</b> {t("date-four-text")}
         </li>
-        <li className="leading-normal mb-8 text-lg tracking-wide">
+        <li className="leading-normal text-lg tracking-wide">
           <b>{t("date-five")}</b> {t("date-five-text")}
         </li>
       </ul>

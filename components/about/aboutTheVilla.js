@@ -12,7 +12,7 @@ export default function AboutTheVilla() {
       <p className="leading-normal mb-8 text-xl tracking-wide">
         {t("text-villa-paragraph-one")}
       </p>
-      <p className="leading-normal mb-8 text-xl tracking-wide">
+      <p className="leading-normal text-xl tracking-wide">
         {t("text-villa-paragraph-two")}
       </p>
     </>
