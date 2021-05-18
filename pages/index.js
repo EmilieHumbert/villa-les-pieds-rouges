@@ -35,7 +35,7 @@ function Home() {
         />
       </div>
 
-      <div className=" mx-auto max-w-xl lg:max-w-4xl text-center text-base sm:text-lg md:text-xl mt-32 mb-8 sm:mb-20">
+      <div className="mx-auto max-w-xl lg:max-w-4xl text-center text-base sm:text-lg md:text-xl mt-20 sm:mt-32 mb-8 sm:mb-20">
         {t("intro")}
       </div>
     </main>
