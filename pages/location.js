@@ -16,7 +16,7 @@ function Location() {
         <div className="col-span-3 mb-8">
           <LocationDescription />
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 mb-8 sm:mb-20">
           <LocationMap />
         </div>
       </div>

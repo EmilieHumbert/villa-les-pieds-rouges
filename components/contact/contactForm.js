@@ -85,7 +85,7 @@ export default function ContactForm() {
               ></input>
               <div className="flex items-center justify-between">
                 <button
-                  className="border-2 border-red-900 text-black font-bold hover:bg-gray-100 mb-8 px-4 py-2 rounded uppercase"
+                  className="border-2 border-red-900 text-black font-bold hover:bg-gray-100 px-4 py-2 rounded uppercase"
                   type="submit"
                   disabled={isSubmitting || isSubmitSuccessful}
                 >

@@ -11,7 +11,7 @@ export default function AboutUs() {
       <p className="leading-normal mb-8 text-xl tracking-wide ">
         {t("text-us-paragraph-one")}
       </p>
-      <p className="leading-normal mb-8 text-xl tracking-wide ">
+      <p className="leading-normal text-xl tracking-wide ">
         {t("text-us-paragraph-two")}
       </p>
     </>

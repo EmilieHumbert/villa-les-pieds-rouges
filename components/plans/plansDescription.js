@@ -18,7 +18,7 @@ export default function PlansDetails({ activeState: [active] }) {
       ].map(([number, floor]) => (
         <div key={number}>
           {active === number && (
-            <p className="leading-normal mb-8 text-xl tracking-wide">
+            <p className="leading-normal text-xl tracking-wide">
               {t(`details-floor-${floor}-paragraph-one`)}
               <br />
               <br />

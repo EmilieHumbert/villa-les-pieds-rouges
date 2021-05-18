@@ -13,7 +13,7 @@ function Plans() {
   return (
     <main className="mx-7px">
       <Head title={t("title")} />
-      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto lg:gap-x-32">
+      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto lg:gap-x-32 mb-8 sm:mb-20">
         <div className="col-span-3 mb-8">
           <PlansFloor activeState={[active]} setActive={setActive} />
         </div>

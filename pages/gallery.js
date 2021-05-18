@@ -15,7 +15,9 @@ function Gallery() {
       <Head title={t("title")}>
         <title>Gallery</title>
       </Head>
-      <MyGallery />
+      <div className="mb-8 sm:mb-20">
+        <MyGallery />
+      </div>
     </main>
   );
 }
