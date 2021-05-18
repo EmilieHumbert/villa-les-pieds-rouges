@@ -24,7 +24,7 @@ export default function PlansFloor({ activeState: [active], setActive }) {
             [`${t("second-floor")}`, 2],
           ].map(([floorTitle, floorNumber]) => (
             <div
-              className="flex items-end justify-start mr-8 mb-8"
+              className="cursor-pointer flex items-end justify-start mr-8 mb-8"
               key={floorTitle}
             >
               <a
