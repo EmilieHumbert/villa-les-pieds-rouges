@@ -30,7 +30,7 @@ export default function PlansFloor({ activeState: [active], setActive }) {
               <a
                 onClick={() => setActive(floorNumber)}
                 className={classNames(
-                  "hidden sm:block capitalize hover:text-gray-500 text-lg border-b-2 border-white",
+                  "sm:block capitalize hover:text-gray-500 text-lg border-b-2 border-white",
                   active === floorNumber ? "border-red-900" : ""
                 )}
               >
