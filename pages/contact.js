@@ -10,6 +10,7 @@ function Contact() {
 
   return (
     <main className="mx-7px">
+      <Head title={t("title")}></Head>
       <div className="grid grid-cols-3 max-w-xl lg:max-w-4xl mx-auto gap-x-32 w-mobile mb-8 sm:mb-20">
         <ContactForm />
       </div>
