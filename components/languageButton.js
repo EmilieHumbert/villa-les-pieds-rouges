@@ -1,6 +1,7 @@
-import classNames from "classnames";
-
+import React from "react";
 import { useRouter } from "next/router";
+
+import classNames from "classnames";
 
 export default function LanguageButton() {
   const languages = ["en", "fr"];
