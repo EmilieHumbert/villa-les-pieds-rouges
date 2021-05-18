@@ -19,7 +19,7 @@ export default function LocationDescription() {
           <Image
             alt={t("locationDescriptionImage")}
             src="/images/surfing.jpg"
-            width="500"
+            width="793"
             height="500"
           />
         </Zoom>
