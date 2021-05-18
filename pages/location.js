@@ -11,11 +11,11 @@ function Location() {
   return (
     <main className="mx-7px">
       <Head title={t("location")} />
-      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto lg:gap-32">
-        <div className="col-span-2">
+      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto">
+        <div className="col-span-3 mb-8">
           <LocationDescription />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-3">
           <LocationMap />
         </div>
       </div>
