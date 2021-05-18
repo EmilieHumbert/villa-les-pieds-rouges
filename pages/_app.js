@@ -1,8 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import Navigation from "../components/navigation";
 
-import App from "next/app";
+import Navigation from "../components/navigation";
 import { appWithTranslation } from "next-i18next";
 
 import "tailwindcss/tailwind.css";
