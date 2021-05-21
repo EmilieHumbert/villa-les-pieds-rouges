@@ -1,9 +1,8 @@
 import React from "react";
-import Image from "next/image";
 
-import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { useTranslation } from "next-i18next";
+import ZoomImage from "./zoomImage";
 
 export default function MyGallery() {
   const { t } = useTranslation("gallery");
@@ -57,11 +56,11 @@ export default function MyGallery() {
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 max-w-xl lg:max-w-4xl mx-auto md:gap-5 gap-x-5 gap-y-5 w-mobile">
         {images.map(([image, description]) => {
           return (
-            <div key={description}>
-              <Zoom>
-                <Image alt={description} src={image} width="500" height="500" />
-              </Zoom>
-            </div>
+            <ZoomImage
+              key={description}
+              description={description}
+              image={image}
+            />
           );
         })}
       </div>
